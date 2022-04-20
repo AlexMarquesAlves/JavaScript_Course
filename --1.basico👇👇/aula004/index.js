@@ -4,15 +4,19 @@
  * Não podemos usar palavras reservadas para criá-las.
  * Precisam possuir nomes significativos.
  // let nomeCliente = 'João'
- console.log(nomeCliente)
+ // console.log(nomeCliente)
+
  * Não pode iniciar-se com um número.
  //let no1me;
+
  *Não pode conter espaços ou traços.
  // let nome-Cliente;
  // let nome Cliente;
+
  * Utiliza-se camelCase.
  // let nomeCompletoDoCliente = 'Luiz Otávio';
  // console.log(nomeCompletoDoCliente)
+
  * Case-sensitive.
  * NÃO UTILIZE VAR, UTILIZE LET.
  */
