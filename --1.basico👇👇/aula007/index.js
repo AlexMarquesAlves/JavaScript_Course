@@ -11,3 +11,5 @@
  * NÃO UTILIZE VAR, UTILIZE COST.
  */
 
+const nome = `João`;
+console.log(nome);
