@@ -16,3 +16,10 @@ console.log(typeof nomeAluno,nomeAluno);
 console.log(typeof sobrenomeAluno,sobrenomeAluno);
 console.log(typeof booleanOn,booleanOn);
 console.log(typeof booleanOff,booleanOff);
+
+let a = 2;
+const b = a;
+console.log(a,b); // 2,2
+
+a = 3;
+console.log(a,b); // 3,2
