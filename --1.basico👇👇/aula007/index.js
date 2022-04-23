@@ -20,5 +20,7 @@ const resultado = primeiroNumero * segundoNumero;
 console.log(resultado);
 const resultadoDuplicado = resultado * 2;
 console.log(resultadoDuplicado);
-const resultadoTriplicado = resultado * 3;
+let resultadoTriplicado = resultado * 3;
+console.log(resultadoTriplicado);
+resultadoTriplicado = resultadoTriplicado + 5;
 console.log(resultadoTriplicado);
