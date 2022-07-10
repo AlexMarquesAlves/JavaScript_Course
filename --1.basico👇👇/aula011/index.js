@@ -25,8 +25,16 @@ contador++; // 13
 ++contador; // 14
 console.log(`Exemplo incremento ++`);
 console.log(contador);
+
 console.log(`Exemplo decremento --`);
 console.log(--contador); // 13
 console.log(--contador); // 12
 console.log(--contador); // 11
 console.log(--contador); // 10
+
+console.log(`Exemplo ++ incremento com valor definido`);
+contador = 0;
+contador += 2; // contador = contador + 2
+contador += 2; // contador = contador + 2
+contador += 2; // contador = contador + 2
+console.log(contador);
