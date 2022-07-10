@@ -38,3 +38,10 @@ contador += 2; // contador = contador + 2
 contador += 2; // contador = contador + 2
 contador += 2; // contador = contador + 2
 console.log(contador);
+
+console.log(`Exemplo -- Decremento com valor definido`);
+contador = 8;
+contador -= 2; // contador = contador - 2
+contador -= 2; // contador = contador - 2
+contador -= 2; // contador = contador - 2
+console.log(contador);
