@@ -1,3 +1,3 @@
-alert(`Bem-Vindo! 😍`);
-prompt(`Qual vosso nome? `);
-confirm(`Realmente desejas Sair 😒? `);
+let name = prompt(`Olá! Qual vosso nome? `);
+alert(`Bem-Vindo! 😍 ${name}`);
+// confirm(`Realmente desejas Sair 😒? `);
