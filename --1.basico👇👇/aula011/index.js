@@ -45,3 +45,10 @@ contador -= 2; // contador = contador - 2
 contador -= 2; // contador = contador - 2
 contador -= 2; // contador = contador - 2
 console.log(contador);
+
+console.log(`Exemplo * Multiplicação com valor definido`);
+contador = 2;
+contador *= 2; // contador = contador * 2
+contador *= 2; // contador = contador * 2
+contador *= 2; // contador = contador * 2
+console.log(contador);
