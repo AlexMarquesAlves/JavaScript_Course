@@ -60,5 +60,5 @@ console.log(contador);
 
 // NaN - Not a Number
 const num4 = 10;
-const num5 = "Luiz";
+const num5 = "5";
 console.log(num4 * num5);
