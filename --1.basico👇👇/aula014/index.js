@@ -13,3 +13,5 @@ console.log(umaString.lastIndexOf("m", 3));
 console.log(umaString.match(/[a-z]/g));
 console.log(umaString.search(/x/));
 console.log(umaString.replace(/r/g, "p"));
+
+console.log(umaString.length);
