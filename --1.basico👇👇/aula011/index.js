@@ -57,3 +57,8 @@ console.log(`Exemplo ** Potenciação com valor definido`);
 contador = 2;
 contador **= 10; // contador = contador ** 2
 console.log(contador);
+
+// NaN - Not a Number
+const num4 = 10;
+const num5 = "Luiz";
+console.log(num4 * num5);
