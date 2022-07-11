@@ -62,3 +62,7 @@ console.log(contador);
 const num4 = 10;
 const num5 = "5";
 console.log(num4 * num5);
+// convertendo string de numero em um inteiro
+const num6 = 10;
+const num7 = parseInt("5");
+console.log(num6 + num7);
