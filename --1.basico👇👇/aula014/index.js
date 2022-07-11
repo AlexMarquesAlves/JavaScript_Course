@@ -15,3 +15,5 @@ console.log(umaString.search(/x/));
 console.log(umaString.replace(/r/g, "p"));
 
 console.log(umaString.length);
+console.log(umaString.slice(2, 5));
+console.log(umaString.slice(-5));
