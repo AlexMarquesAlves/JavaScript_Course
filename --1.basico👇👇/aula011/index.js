@@ -66,17 +66,23 @@ console.log(num4 * num5);
 // convertendo string de numero em um 'Int'
 let num6 = 10;
 let num7 = parseInt("5");
-console.log(`convertendo string de numero em um Int`);
+console.log(`Convertendo string de numero em um Int`);
 console.log(num6 + num7);
 
 // convertendo string de numero em um 'Float'
 num6 = 10;
 num7 = parseFloat("5.2");
-console.log(`convertendo string de numero em um Float`);
+console.log(`Convertendo string de numero em um Float`);
 console.log(num6 + num7);
 
 // convertendo string de numero em um 'Number'
 num6 = 10;
-num7 = Number("5.2");
-console.log(`convertendo string de numero em um Float`);
+num7 = Number("5.5");
+console.log(`Convertendo string de numero em um 'Number'`);
+console.log(num6 + num7);
+
+// convertendo string em um 'Number' ⁉️
+num6 = 10;
+num7 = Number("Luiz");
+console.log(`Convertendo string em um 'Number' ⁉️`);
 console.log(num6 + num7);
