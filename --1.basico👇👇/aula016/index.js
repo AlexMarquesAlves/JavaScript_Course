@@ -1,4 +1,8 @@
-let num1 = 9.54578;
+let num1 = 9;
+
+console.log(num1 ** (1 / 2));
+console.log(num1 ** 0.5);
+
 // let num2 = Math.floor(num1);
 // let num2 = Math.ceil(num1);
 // let num2 = Math.round(num1);
