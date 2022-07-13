@@ -5,3 +5,5 @@ let num1 = 9.54578;
 
 console.log(Math.max(1, 2, 3, 4, 5, -10, -50, 1500, 9, 8, 7, 6));
 console.log(Math.min(1, 2, 3, 4, 5, -10, -50, 1500, 9, 8, 7, 6));
+
+console.log(Math.random());
