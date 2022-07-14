@@ -1,6 +1,7 @@
 const alunos = ["Luiz", "Maria", "João"];
 
 console.log(typeof alunos);
+console.log(alunos instanceof Array);
 
 // alunos.push("Luíza");
 // alunos.push("Eduardo");
