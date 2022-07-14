@@ -1,9 +1,15 @@
 const alunos = ["Luiz", "Maria", "João"];
 
-const removido = alunos.shift(); // Remove do Começo
-console.log(removido);
+alunos.push("Luíza");
+alunos.push("Eduardo");
 
-console.log(alunos);
+console.log(alunos.slice(0, 3));
+console.log(alunos.slice(0, -1));
+
+// console.log(alunos[50]);
+
+// const removido = alunos.shift(); // Remove do Começo
+// console.log(removido);
 
 // const removido = alunos.pop(); // Remove do final
 // console.log(removido);
