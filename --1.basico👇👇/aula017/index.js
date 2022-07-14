@@ -1,10 +1,12 @@
 const alunos = ["Luiz", "Maria", "João"];
 
-alunos.push("Luíza");
-alunos.push("Eduardo");
+console.log(typeof alunos);
 
-console.log(alunos.slice(0, 3));
-console.log(alunos.slice(0, -1));
+// alunos.push("Luíza");
+// alunos.push("Eduardo");
+
+// console.log(alunos.slice(0, 3));
+// console.log(alunos.slice(0, -1));
 
 // console.log(alunos[50]);
 
