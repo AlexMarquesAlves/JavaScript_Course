@@ -1,8 +1,12 @@
 const alunos = ["Luiz", "Maria", "João"];
 
-const removido = alunos.pop(); // Remove do final
+const removido = alunos.shift(); // Remove do Começo
 console.log(removido);
+
 console.log(alunos);
+
+// const removido = alunos.pop(); // Remove do final
+// console.log(removido);
 
 // alunos.unshift("Luíza"); // Adiciona no Começo
 // alunos.unshift("Fábio");
