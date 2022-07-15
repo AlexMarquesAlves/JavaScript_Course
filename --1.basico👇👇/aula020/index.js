@@ -17,6 +17,7 @@ a = "Outra coisa";
 console.log(a, b);
 */
 
+/*
 let a = [1, 2, 3];
 let b = [...a];
 let c = b;
@@ -30,3 +31,13 @@ console.log(a, b);
 
 a.push("Luiz");
 console.log(a, c);
+*/
+
+const a = {
+  nome: "Luiz",
+  sobrenome: "Otavio",
+};
+const b = { ...a };
+
+a.nome = "Joao";
+console.log(b);
