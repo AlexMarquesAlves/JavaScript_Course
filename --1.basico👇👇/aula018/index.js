@@ -17,7 +17,11 @@ function soma(x = 1, y = 1) {
 // const resultado = soma(4, 2);
 // console.log(resultado);
 
-const raiz = function (n) {
+// const raiz = function (n) {
+//   return n ** 0.5;
+// };
+
+const raiz = (n) => {
   return n ** 0.5;
 };
 
