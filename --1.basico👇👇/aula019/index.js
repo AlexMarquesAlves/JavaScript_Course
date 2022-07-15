@@ -21,4 +21,8 @@ function criaPessoa(nome, sobrenome, idade) {
   };
 }
 
-const pessoa1 = criaPessoa("Luiz", "Otavio", 25);
+const pessoa1 = criaPessoa("Luiz", "Miranda", 25);
+const pessoa2 = criaPessoa("Maria", "Oliveira", 25);
+const pessoa3 = criaPessoa("Joao", "Moreira", 25);
+const pessoa4 = criaPessoa("Junior", "Lara", 25);
+const pessoa5 = criaPessoa("Jean", "Otavio", 25);
