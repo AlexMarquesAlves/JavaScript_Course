@@ -10,6 +10,9 @@ function soma(x, y) {
   return resultado;
 }
 
-console.log(soma(2, 2));
-console.log(soma(3, 6));
-console.log(soma(5, 10));
+// console.log(soma(2, 2));
+// console.log(soma(3, 6));
+// console.log(soma(5, 10));
+
+const resultado = soma(2, 2);
+console.log(resultado);
