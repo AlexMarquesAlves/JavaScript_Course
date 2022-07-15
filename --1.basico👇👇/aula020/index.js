@@ -4,20 +4,19 @@
  * Referência (Mutável) - array, object, function - Passado por referência
  */
 
-/*
+// Valores primitivos --> São Copiados
 let nome = "Luiz";
 nome[0] = "R"; // não ocorre nada
 console.log(nome[0], nome);
 
-let a = "A";
-let b = a; // Cópia
-console.log(a, b);
+let a1 = "A";
+let b1 = a1; // Cópia
+console.log(a1, b1);
 
-a = "Outra coisa";
-console.log(a, b);
-*/
+a1 = "Outra coisa";
+console.log(a1, b1);
 
-/*
+// Valores por referência --> São Referenciados
 let a = [1, 2, 3];
 let b = [...a];
 let c = b;
@@ -31,13 +30,13 @@ console.log(a, b);
 
 a.push("Luiz");
 console.log(a, c);
-*/
 
-const a = {
+const d = {
   nome: "Luiz",
   sobrenome: "Otavio",
 };
-const b = { ...a };
+const e = { ...d };
 
 a.nome = "Joao";
-console.log(b);
+console.log(d);
+console.log(e);
