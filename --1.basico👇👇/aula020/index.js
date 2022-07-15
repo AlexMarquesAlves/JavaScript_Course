@@ -23,3 +23,6 @@ console.log(a, b);
 
 a.push(4);
 console.log(a, b);
+
+b.pop();
+console.log(a, b);
