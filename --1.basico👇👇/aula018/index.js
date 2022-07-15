@@ -5,7 +5,7 @@
 // const variavel = saudacao("Leo");
 // console.log(variavel);
 
-function soma(x, y) {
+function soma(x = 1, y = 1) {
   const resultado = x + y;
   return resultado;
 }
@@ -14,5 +14,5 @@ function soma(x, y) {
 // console.log(soma(3, 6));
 // console.log(soma(5, 10));
 
-const resultado = soma(2, 2);
+const resultado = soma();
 console.log(resultado);
