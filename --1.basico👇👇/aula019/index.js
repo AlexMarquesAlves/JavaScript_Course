@@ -28,6 +28,7 @@ const pessoa4 = criaPessoa("Junior", "Lara", 44);
 const pessoa5 = criaPessoa("Jean", "Otavio", 69);
 
 console.log(
+  "Nome: ",
   pessoa1.nome,
   pessoa2.nome,
   pessoa3.nome,
@@ -35,6 +36,7 @@ console.log(
   pessoa5.nome
 );
 console.log(
+  "Sobrenome: ",
   pessoa1.sobrenome,
   pessoa2.sobrenome,
   pessoa3.sobrenome,
@@ -42,6 +44,7 @@ console.log(
   pessoa5.sobrenome
 );
 console.log(
+  "Idade: ",
   pessoa1.idade,
   pessoa2.idade,
   pessoa3.idade,
