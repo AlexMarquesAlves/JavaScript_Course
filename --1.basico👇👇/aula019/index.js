@@ -26,3 +26,11 @@ const pessoa2 = criaPessoa("Maria", "Oliveira", 25);
 const pessoa3 = criaPessoa("Joao", "Moreira", 25);
 const pessoa4 = criaPessoa("Junior", "Lara", 25);
 const pessoa5 = criaPessoa("Jean", "Otavio", 25);
+
+console.log(
+  pessoa1.nome,
+  pessoa2.nome,
+  pessoa3.nome,
+  pessoa4.nome,
+  pessoa5.nome
+);
