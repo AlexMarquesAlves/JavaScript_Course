@@ -1,7 +1,7 @@
 /**
- * Primitivos (imutáveis) - string, number, boolean, undefined null (bigint, symbol)
+ * Primitivos (imutáveis) - string, number, boolean, undefined null (bigint, symbol) - Valores copiados
  *
- * Referência (Mutável) - array, object, function
+ * Referência (Mutável) - array, object, function - Passado por referência
  */
 
 /*
@@ -18,7 +18,8 @@ console.log(a, b);
 */
 
 let a = [1, 2, 3];
-let b = a;
+let b = [...a];
+let c = b;
 console.log(a, b);
 
 a.push(4);
@@ -26,3 +27,6 @@ console.log(a, b);
 
 b.pop();
 console.log(a, b);
+
+a.push("Luiz");
+console.log(a, c);
