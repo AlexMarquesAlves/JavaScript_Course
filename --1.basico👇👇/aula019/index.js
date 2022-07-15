@@ -34,3 +34,10 @@ console.log(
   pessoa4.nome,
   pessoa5.nome
 );
+console.log(
+  pessoa1.sobrenome,
+  pessoa2.sobrenome,
+  pessoa3.sobrenome,
+  pessoa4.sobrenome,
+  pessoa5.sobrenome
+);
