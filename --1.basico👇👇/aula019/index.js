@@ -22,10 +22,10 @@ function criaPessoa(nome, sobrenome, idade) {
 }
 
 const pessoa1 = criaPessoa("Luiz", "Miranda", 25);
-const pessoa2 = criaPessoa("Maria", "Oliveira", 25);
-const pessoa3 = criaPessoa("Joao", "Moreira", 25);
-const pessoa4 = criaPessoa("Junior", "Lara", 25);
-const pessoa5 = criaPessoa("Jean", "Otavio", 25);
+const pessoa2 = criaPessoa("Maria", "Oliveira", 35);
+const pessoa3 = criaPessoa("Joao", "Moreira", 55);
+const pessoa4 = criaPessoa("Junior", "Lara", 44);
+const pessoa5 = criaPessoa("Jean", "Otavio", 69);
 
 console.log(
   pessoa1.nome,
@@ -40,4 +40,11 @@ console.log(
   pessoa3.sobrenome,
   pessoa4.sobrenome,
   pessoa5.sobrenome
+);
+console.log(
+  pessoa1.idade,
+  pessoa2.idade,
+  pessoa3.idade,
+  pessoa4.idade,
+  pessoa5.idade
 );
