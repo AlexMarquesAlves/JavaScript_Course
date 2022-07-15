@@ -1,5 +1,5 @@
-function saudacao() {
-  console.log(`Bom Dia!`);
+function saudacao(nome) {
+  console.log(`Bom Dia ${nome}!`);
 }
 
-saudacao();
+saudacao("Leo");
