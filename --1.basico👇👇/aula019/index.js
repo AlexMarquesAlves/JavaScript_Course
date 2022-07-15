@@ -1,8 +1,12 @@
-// const pessoa1 = {
-//   nome: `Luiz`,
-//   sobrenome: `Miranda`,
-//   idade: 25,
-// };
+const pessoa1 = {
+  nome: `Luiz `,
+  sobrenome: `Miranda`,
+  idade: 25,
+
+  fala() {
+    console.log(`Olá! chamo-me ${nome + sobrenome}, tenho ${idade} anos.`); // precisa-se do 'this' para referenciar os atributos
+  },
+};
 // const pessoa2 = {
 //   nome: `Maria`,
 //   sobrenome: `Oliveira`,
@@ -21,7 +25,7 @@ function criaPessoa(nome, sobrenome, idade) {
   };
 }
 
-const pessoa1 = criaPessoa("Luiz", "Miranda", 25);
+// const pessoa1 = criaPessoa("Luiz", "Miranda", 25);
 const pessoa2 = criaPessoa("Maria", "Oliveira", 35);
 const pessoa3 = criaPessoa("Joao", "Moreira", 55);
 const pessoa4 = criaPessoa("Junior", "Lara", 44);
@@ -29,7 +33,7 @@ const pessoa5 = criaPessoa("Jean", "Otavio", 69);
 
 console.log(
   "Nome: ",
-  pessoa1.nome,
+  // pessoa1.nome,
   pessoa2.nome,
   pessoa3.nome,
   pessoa4.nome,
@@ -37,7 +41,7 @@ console.log(
 );
 console.log(
   "Sobrenome: ",
-  pessoa1.sobrenome,
+  // pessoa1.sobrenome,
   pessoa2.sobrenome,
   pessoa3.sobrenome,
   pessoa4.sobrenome,
@@ -45,9 +49,11 @@ console.log(
 );
 console.log(
   "Idade: ",
-  pessoa1.idade,
+  // pessoa1.idade,
   pessoa2.idade,
   pessoa3.idade,
   pessoa4.idade,
   pessoa5.idade
 );
+
+pessoa1.fala();
