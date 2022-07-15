@@ -20,3 +20,5 @@ function criaPessoa(nome, sobrenome, idade) {
     idade: idade,
   };
 }
+
+const pessoa1 = criaPessoa("Luiz", "Otavio", 25);
