@@ -35,6 +35,18 @@ function getIMCLevel(imc) {
     "Obesidade grau 2",
     "Obesidade grau 3",
   ];
+
+  if (imc >= 39.9) {
+    //
+  } else if (imc >= 34.9) {
+    //
+  } else if (imc >= 29.9) {
+    //
+  } else if (imc >= 24.9) {
+    //
+  } else if (imc >= 18.5) {
+    //
+  }
 }
 
 function getIMC(peso, altura) {
