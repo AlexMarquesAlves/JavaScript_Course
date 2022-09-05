@@ -47,6 +47,7 @@ function getIMCLevel(imc) {
     return nivel[3];
   } else if (imc >= 24.9) {
     // Sobrepeso
+    return nivel[2];
   } else if (imc >= 18.5) {
     // Peso normal
   } else if (imc < 18.5) {
