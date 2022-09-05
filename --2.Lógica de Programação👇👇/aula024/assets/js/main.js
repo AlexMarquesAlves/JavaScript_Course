@@ -32,4 +32,6 @@ function setResult(msg, isValid) {
   const result = document.querySelector("#result");
   result.innerHTML = "";
   const p = criaP();
+  p.innerHTML = msg;
+  result.appendChild(p);
 }
