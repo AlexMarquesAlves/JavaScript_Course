@@ -5,3 +5,8 @@ function objectDateOne() {
   const data = new Date(0 + tresHoras + umDia);
   console.log(data.toString());
 }
+
+function objectDateTwo() {
+  const data = new Date(2022, 8, 05, 12, 30);
+  console.log(data.toString());
+}
