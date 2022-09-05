@@ -12,7 +12,10 @@ form.addEventListener("submit", function (e) {
   const peso = Number(inputPeso.value);
   const altura = Number(inputAltura.value);
 
-  console.log(peso, altura);
+  if (!peso) {
+    setResult("Peso Inválido", false);
+    return;
+  }
 });
 
 function criaP() {
@@ -20,7 +23,7 @@ function criaP() {
   return p;
 }
 
-function setResult(msg) {
+function setResult(msg, isValid) {
   const result = document.querySelector("#result");
   result.innerHTML = "";
   const p = criaP();
