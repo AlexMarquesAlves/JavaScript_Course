@@ -37,15 +37,17 @@ function getIMCLevel(imc) {
   ];
 
   if (imc >= 39.9) {
-    //
+    // Obesidade grau 3
+    return nivel[5];
   } else if (imc >= 34.9) {
-    //
   } else if (imc >= 29.9) {
-    //
+    // Obesidade grau 1
   } else if (imc >= 24.9) {
-    //
+    // Sobrepeso
   } else if (imc >= 18.5) {
-    //
+    // Peso normal
+  } else if (imc < 18.5) {
+    // Abaixo do peso
   }
 }
 
