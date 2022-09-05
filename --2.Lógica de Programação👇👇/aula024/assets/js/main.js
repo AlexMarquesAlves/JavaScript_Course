@@ -61,6 +61,13 @@ function criaP() {
 function setResult(msg, isValid) {
   const result = document.querySelector("#result");
   result.innerHTML = "";
+
+  if (isValid) {
+    p.classList.add("paragrafo-resultado");
+  } else {
+    p.classList.add("bad");
+  }
+
   const p = criaP();
   p.innerHTML = msg;
   result.appendChild(p);
