@@ -16,6 +16,11 @@ form.addEventListener("submit", function (e) {
     setResult("Peso Inválido", false);
     return;
   }
+
+  if (!altura) {
+    setResult("Altura Inválida", false);
+    return;
+  }
 });
 
 function criaP() {
