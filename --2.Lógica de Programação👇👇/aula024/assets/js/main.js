@@ -5,3 +5,8 @@ form.addEventListener("submit", function (e) {
   e.preventDefault();
   console.log(`Evento ${e} Previnido.`);
 });
+
+function criaP() {
+  const p = document.createElement("p");
+  return p;
+}
