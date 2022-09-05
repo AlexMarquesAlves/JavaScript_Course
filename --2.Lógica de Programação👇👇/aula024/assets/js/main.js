@@ -23,7 +23,11 @@ form.addEventListener("submit", function (e) {
   }
 
   const imc = getIMC(peso, altura);
-  console.log(imc);
+  const nivelIMC = getIMCLevel(imc);
+
+  const msg = `Seu IMC é ${imc} ${nivelIMC}`;
+
+  setResult(msg, true);
 });
 
 function getIMCLevel(imc) {
@@ -41,7 +45,7 @@ function getIMCLevel(imc) {
   if (imc >= 29.9) return nivel[3]; // Obesidade grau 1
   if (imc >= 24.9) return nivel[2]; // Sobrepeso
   if (imc >= 18.5) return nivel[1]; // Peso normal
-  if (imc < 18.5) return nivel[0]; // Abaixo do peso
+  if (imc <= 18.4) return nivel[0]; // Abaixo do peso
 }
 
 function getIMC(peso, altura) {
