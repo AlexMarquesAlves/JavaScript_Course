@@ -6,8 +6,13 @@ form.addEventListener("submit", function (e) {
   console.log(`Evento ${e} Previnido.`); // temp
   const inputPeso = e.target.querySelector("#peso");
   const inputAltura = e.target.querySelector("#altura");
-  console.log(`Peso: ${inputPeso.value}`);
-  console.log(`Altura: ${inputAltura.value}`);
+  console.log(`Peso: ${inputPeso.value}`); // temp
+  console.log(`Altura: ${inputAltura.value}`); // temp
+
+  const peso = Number(inputPeso.value);
+  const altura = Number(inputAltura.value);
+
+  console.log(peso, altura);
 });
 
 function criaP() {
