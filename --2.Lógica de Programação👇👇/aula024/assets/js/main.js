@@ -44,6 +44,7 @@ function getIMCLevel(imc) {
     return nivel[4];
   } else if (imc >= 29.9) {
     // Obesidade grau 1
+    return nivel[3];
   } else if (imc >= 24.9) {
     // Sobrepeso
   } else if (imc >= 18.5) {
