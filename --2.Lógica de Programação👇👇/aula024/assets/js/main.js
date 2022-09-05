@@ -50,6 +50,7 @@ function getIMCLevel(imc) {
     return nivel[2];
   } else if (imc >= 18.5) {
     // Peso normal
+    return nivel[1];
   } else if (imc < 18.5) {
     // Abaixo do peso
   }
