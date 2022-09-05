@@ -30,3 +30,18 @@ objectDateTwo();
 console.log("");
 objectDateTree();
 console.log("");
+
+function formataData(data) {
+  const dia = zeroAEsquerda(data.getDate());
+  const mes = zeroAEsquerda(data.getMonth() + 1);
+  const ano = zeroAEsquerda(data.getFullYear());
+  const hor = zeroAEsquerda(data.getHours());
+  const min = zeroAEsquerda(data.getMinutes());
+  const seg = zeroAEsquerda(data.getSeconds());
+
+  return `${dia}/${mes}/${ano} ${hor}:${min}:${seg}`;
+}
+
+const data = new Date();
+const dataBrasil = formataData(data);
+console.log(dataBrasil);
