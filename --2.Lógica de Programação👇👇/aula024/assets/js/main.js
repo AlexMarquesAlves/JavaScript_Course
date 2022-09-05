@@ -21,7 +21,15 @@ form.addEventListener("submit", function (e) {
     setResult("Altura Inválida", false);
     return;
   }
+
+  const imc = getIMC(peso, altura);
+  console.log(imc);
 });
+
+function getIMC(peso, altura) {
+  const imc = peso / altura ** 2;
+  return imc.toFixed(2);
+}
 
 function criaP() {
   const p = document.createElement("p");
