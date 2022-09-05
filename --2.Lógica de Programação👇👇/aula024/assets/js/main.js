@@ -10,3 +10,9 @@ function criaP() {
   const p = document.createElement("p");
   return p;
 }
+
+function setResult(msg) {
+  const result = document.querySelector("#result");
+  result.innerHTML = "";
+  const p = criaP();
+}
