@@ -26,6 +26,8 @@ form.addEventListener("submit", function (e) {
   console.log(imc);
 });
 
+function getIMCLevel(imc) {}
+
 function getIMC(peso, altura) {
   const imc = peso / altura ** 2;
   return imc.toFixed(2);
