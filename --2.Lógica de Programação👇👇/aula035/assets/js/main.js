@@ -20,7 +20,7 @@ const div = document.createElement("div");
 for (let i = 0; i < elements.length; i++) {
   let { tag, text } = elements[i];
   let tagCreated = document.createElement(tag);
-  tagCreated.innerHTML = text;
+  tagCreated.innerText = text;
   div.appendChild(tagCreated);
   console.log(tag, text);
 }
