@@ -1,15 +1,28 @@
 const elements = [
   {
     tag: "p",
-    text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus",
+    text: "Frase 1",
   },
   {
     tag: "div",
-    text: "Nulla repellat voluptatum quibusdam, commodi explicabo sapiente eveniet culpa quod assumenda minima labore quo provident eum eius sed. Nulla repellat voluptatum quibusdam, commodi explicabo sapiente eveniet culpa quod assumenda minima labore quo provident eum eius sed.",
+    text: "Frase 2",
   },
   {
     tag: "section",
-    text: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto cum, quo possimus laboriosam vitae vero iste nobis distinctio asperiores voluptate itaque ea exercitationem. Quis, sapiente dolorem quas consequatur velit maxime!  Ipsa dolorum doloribus quae praesentium ut? Quisquam quae eius voluptas accusantium hic deserunt sunt repellendus esse voluptates cupiditate aliquam, amet dolore cum ipsum iusto natus fugit nostrum repudiandae facere fuga?  Cupiditate quidem aspernatur iusto excepturi ab? Tempore dolorum, praesentium doloribus laborum placeat, quis quaerat enim aspernatur ipsum atque iste! Exercitationem ratione ipsa debitis porro qui temporibus, velit vitae voluptate? Quaerat.",
+    text: "Frase 3",
   },
-  { tag: "footer", text: "Dolor sit amet" },
+  { tag: "footer", text: "Frase 4" },
 ];
+
+const container = document.querySelector(".container");
+const div = document.createElement("div");
+
+for (let i = 0; i < elements.length; i++) {
+  let { tag, text } = elements[i];
+  let tagCreated = document.createElement(tag);
+  tagCreated.innerHTML = text;
+  div.appendChild(tagCreated);
+  console.log(tag, text);
+}
+
+container.appendChild(div);
