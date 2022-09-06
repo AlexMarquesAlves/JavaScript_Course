@@ -1,7 +1,7 @@
 const h1 = document.querySelector(".container h1");
 const data = new Date();
 
-function getDayWeek(diaSemana) {
+function getDayWeek(dayWeek) {
   let diaSemanaTexto;
 
   switch (diaSemana) {
@@ -31,6 +31,7 @@ function getDayWeek(diaSemana) {
       return diaSemanaTexto;
   }
 }
+
 function getMonthName(monthNumber) {
   let monthName;
 
@@ -78,4 +79,22 @@ function getMonthName(monthNumber) {
   }
 }
 
-h1.innerHTML = getDayWeek(data.getDay());
+function zeroAEsquerda(num) {
+  return num >= 10 ? num : `0${num}`;
+}
+
+function createDate(data) {
+  const dayWeek = data.getDay();
+  const monthNumber = data.getMonth();
+
+  const dayName = getDayWeek(dayWeek);
+  const monthName = getMonthName(monthNumber);
+
+  return (
+    `${dayName}, ${data.getDate()} de ${monthName}` +
+    ` de ${data.getFullYear()} ` +
+    `${zeroAEsquerda(data.getHours()}:${zeroAEsquerda(data.getMinutes()}`
+  );
+}
+
+h1.innerHTML = createDate(data);
