@@ -4,3 +4,7 @@ const nome = ["Luiz", "Otávio", "Henrique"];
 for (let i = 0; i < nome.length; i++) {
   console.log(nome[i]);
 }
+// For in
+for (let i in nome) {
+  console.log(nome[i]);
+}
