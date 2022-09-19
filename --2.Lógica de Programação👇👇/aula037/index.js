@@ -8,3 +8,7 @@ for (let i = 0; i < nome.length; i++) {
 for (let i in nome) {
   console.log(nome[i]);
 }
+// For of
+for (const valor of nome) {
+  console.log(valor);
+}
