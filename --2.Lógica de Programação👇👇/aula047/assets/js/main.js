@@ -22,7 +22,7 @@ let timer;
 function startWatch() {
   timer = setInterval(() => {
     seconds++;
-    relogio.innerHTML += getTimeFromSeconds(seconds);
+    relogio.innerHTML = getTimeFromSeconds(seconds);
   }, 1000);
 }
 
@@ -35,5 +35,6 @@ pausar.addEventListener(`click`, (event) => {
 });
 
 zerar.addEventListener(`click`, (event) => {
-  alert(`Cliquei no zerar`);
+  clearInterval(timer);
+  relogio.innerHTML = `00:00:00`;
 });
