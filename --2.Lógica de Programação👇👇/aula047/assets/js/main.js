@@ -26,20 +26,25 @@ function startWatch() {
   }, 1000);
 }
 
-iniciar.addEventListener(`click`, (event) => {
-  relogio.classList.remove(`pausado`);
-  clearInterval(timer);
-  startWatch();
+document.addEventListener(`click`, (e) => {
+  const el = e.target;
+
+  if (el.classList.contains(`zerar`)) {
+    relogio.classList.remove(`pausado`);
+    clearInterval(timer);
+    relogio.innerHTML = `00:00:00`;
+    seconds = 0;
+  }
+
+  if (el.classList.contains(`iniciar`)) {
+  }
+
+  if (el.classList.contains(`pausar`)) {
+  }
 });
 
-pausar.addEventListener(`click`, (event) => {
-  clearInterval(timer);
-  relogio.classList.add(`pausado`);
-});
+iniciar.addEventListener(`click`, (event) => {});
 
-zerar.addEventListener(`click`, (event) => {
-  relogio.classList.remove(`pausado`);
-  clearInterval(timer);
-  relogio.innerHTML = `00:00:00`;
-  seconds = 0;
-});
+pausar.addEventListener(`click`, (event) => {});
+
+zerar.addEventListener(`click`, (event) => {});
