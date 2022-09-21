@@ -27,6 +27,7 @@ function startWatch() {
 }
 
 iniciar.addEventListener(`click`, (event) => {
+  clearInterval(timer);
   startWatch();
 });
 
@@ -37,4 +38,5 @@ pausar.addEventListener(`click`, (event) => {
 zerar.addEventListener(`click`, (event) => {
   clearInterval(timer);
   relogio.innerHTML = `00:00:00`;
+  seconds = 0;
 });
