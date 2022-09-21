@@ -7,6 +7,13 @@ function createLi() {
   return li;
 }
 
+inputTarefa.addEventListener("keypress", function (e) {
+  if (e.keyCode === 13) {
+    if (!inputTarefa.value) return;
+    createTodo(inputTarefa.value);
+  }
+});
+
 function clearInput() {
   inputTarefa.value = "";
   inputTarefa.focus();
