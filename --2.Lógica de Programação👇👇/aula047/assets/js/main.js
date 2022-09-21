@@ -17,9 +17,17 @@ const iniciar = document.querySelector(`.iniciar`);
 const pausar = document.querySelector(`.pausar`);
 const zerar = document.querySelector(`.zerar`);
 let seconds = 0;
+let timer;
+
+function startWatch() {
+  timer = setInterval(() => {
+    seconds++;
+    relogio.innerHTML += getTimeFromSeconds(seconds);
+  }, 1000);
+}
 
 iniciar.addEventListener(`click`, (event) => {
-  alert(`Cliquei no iniciar`);
+  startWatch();
 });
 
 pausar.addEventListener(`click`, (event) => {
