@@ -17,3 +17,9 @@ function executaFuncao(funcao) {
 }
 
 executaFuncao(souUmDado);
+
+// Arrow function
+const funcaoArrow = () => {
+  console.log("sou uma arrow function");
+};
+funcaoArrow();
