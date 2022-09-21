@@ -51,3 +51,17 @@ document.addEventListener("click", function (e) {
     saveTodo();
   }
 });
+
+function saveTodo() {
+  const liTarefas = tarefas.querySelectorAll("li");
+  const listaDeTarefas = [];
+
+  for (let tarefa of liTarefas) {
+    let tarefaTexto = tarefa.innerText;
+    tarefaTexto = tarefaTexto.replace("Apagar", "").trim();
+    listaDeTarefas.push(tarefaTexto);
+  }
+
+  const tarefasJSON = JSON.stringify(listaDeTarefas);
+  localStorage.setItem("tarefas", tarefasJSON);
+}
