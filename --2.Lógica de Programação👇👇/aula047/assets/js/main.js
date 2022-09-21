@@ -47,9 +47,3 @@ document.addEventListener(`click`, (e) => {
     relogio.classList.add(`pausado`);
   }
 });
-
-iniciar.addEventListener(`click`, (event) => {});
-
-pausar.addEventListener(`click`, (event) => {});
-
-zerar.addEventListener(`click`, (event) => {});
