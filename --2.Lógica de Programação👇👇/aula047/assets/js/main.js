@@ -37,6 +37,9 @@ document.addEventListener(`click`, (e) => {
   }
 
   if (el.classList.contains(`iniciar`)) {
+    relogio.classList.remove(`pausado`);
+    clearInterval(timer);
+    startWatch();
   }
 
   if (el.classList.contains(`pausar`)) {
