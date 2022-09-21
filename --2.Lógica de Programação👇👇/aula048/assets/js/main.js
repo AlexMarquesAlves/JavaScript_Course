@@ -2,13 +2,18 @@ const inputTarefa = document.querySelector(".input-tarefa");
 const btnTarefa = document.querySelector(".btn-tarefa");
 const tarefas = document.querySelector(".tarefas");
 
+function createLi() {
+  const li = document.createElement("li");
+  return li;
+}
+
 function createTodo(textoInput) {
-  // const li = criaLi();
+  const li = createLi();
   li.innerText = textoInput;
   tarefas.appendChild(li);
-  // limpaInput();
-  // criaBotaoApagar(li);
-  // salvarTarefas();
+  clearInput();
+  createDeleteButton(li);
+  saveTodo();
 }
 
 btnTarefa.addEventListener("click", function () {
