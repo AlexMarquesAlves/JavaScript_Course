@@ -1,0 +1,28 @@
+.container {
+  .form {
+    button {
+      border-radius: 2rem;
+    }
+  }
+  .tarefas {
+    li {
+      button {
+        border: none;
+        border-radius: 2rem;
+        background: var(--primary-color);
+        color: #fff;
+        font-size: 1rem;
+        font-weight: 700;
+        height: fit-content;
+        cursor: pointer;
+        margin-top: 1.875rem;
+        margin-left: 1rem;
+        padding: 0 1rem;
+
+        &:hover {
+          background: var(--primary-color-darker);
+        }
+      }
+    }
+  }
+}
