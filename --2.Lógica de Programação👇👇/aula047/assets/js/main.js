@@ -43,6 +43,8 @@ document.addEventListener(`click`, (e) => {
   }
 
   if (el.classList.contains(`pausar`)) {
+    clearInterval(timer);
+    relogio.classList.add(`pausado`);
   }
 });
 
