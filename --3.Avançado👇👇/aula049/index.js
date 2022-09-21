@@ -23,3 +23,11 @@ const funcaoArrow = () => {
   console.log("sou uma arrow function");
 };
 funcaoArrow();
+
+// Dentro de um objeto
+const obj = {
+  falar: function () {
+    console.log("Estou falando...");
+  },
+};
+obj.falar();
