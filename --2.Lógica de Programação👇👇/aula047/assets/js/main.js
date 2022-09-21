@@ -1,10 +1,4 @@
-const paragrafos = document.querySelector(".paragrafos");
-const ps = paragrafos.querySelectorAll("p");
-
-const estilosBody = getComputedStyle(document.body);
-const backgroundColorBody = estilosBody.backgroundColor;
-
-for (let p of ps) {
-  p.style.backgroundColor = backgroundColorBody;
-  p.style.color = "#FFF";
-}
+const relogio = document.querySelector(`.relogio`);
+const iniciar = document.querySelector(`.iniciar`);
+const pausar = document.querySelector(`.pausar`);
+const zerar = document.querySelector(`.zerar`);
