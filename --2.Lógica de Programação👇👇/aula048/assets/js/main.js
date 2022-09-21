@@ -7,6 +7,11 @@ function createLi() {
   return li;
 }
 
+function clearInput() {
+  inputTarefa.value = "";
+  inputTarefa.focus();
+}
+
 function createTodo(textoInput) {
   const li = createLi();
   li.innerText = textoInput;
