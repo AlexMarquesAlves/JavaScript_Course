@@ -7,7 +7,7 @@ function createLi() {
   return li;
 }
 
-inputTarefa.addEventListener("keypress", function (e) {
+inputTarefa.addEventListener("keypress", (e) => {
   if (e.keyCode === 13) {
     if (!inputTarefa.value) return;
     createTodo(inputTarefa.value);
@@ -38,12 +38,12 @@ function createTodo(textoInput) {
   saveTodo();
 }
 
-btnTarefa.addEventListener("click", function () {
+btnTarefa.addEventListener("click", () => {
   if (!inputTarefa.value) return;
   createTodo(inputTarefa.value);
 });
 
-document.addEventListener("click", function (e) {
+document.addEventListener("click", (e) => {
   const el = e.target;
 
   if (el.classList.contains("apagar")) {
