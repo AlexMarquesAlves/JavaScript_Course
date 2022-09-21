@@ -31,7 +31,7 @@ iniciar.addEventListener(`click`, (event) => {
 });
 
 pausar.addEventListener(`click`, (event) => {
-  alert(`Cliquei no pausar`);
+  clearInterval(timer);
 });
 
 zerar.addEventListener(`click`, (event) => {
