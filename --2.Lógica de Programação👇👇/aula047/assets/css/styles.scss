@@ -1,7 +1,28 @@
-.relogio {
-  font-size: 3rem;
-}
+.container {
+  text-align: center;
 
-.pausado {
-  color: hsl(0, 100%, 50%);
+  .buttons button {
+    color: hsl(0, 0%, 100%);
+    cursor: pointer;
+    font-size: 1.2rem;
+    margin-inline: 1rem;
+    border-radius: 2rm;
+    background-color: var(--primary-color);
+    border: none;
+    padding: 0.7rem;
+    border-radius: 2rem;
+    transition: all 300ms ease-in-out;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+
+  .relogio {
+    font-size: 4rem;
+  }
+
+  .pausado {
+    color: hsl(0, 100%, 50%);
+  }
 }
