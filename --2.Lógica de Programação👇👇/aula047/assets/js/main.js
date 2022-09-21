@@ -27,15 +27,18 @@ function startWatch() {
 }
 
 iniciar.addEventListener(`click`, (event) => {
+  relogio.classList.remove(`pausado`);
   clearInterval(timer);
   startWatch();
 });
 
 pausar.addEventListener(`click`, (event) => {
   clearInterval(timer);
+  relogio.classList.add(`pausado`);
 });
 
 zerar.addEventListener(`click`, (event) => {
+  relogio.classList.remove(`pausado`);
   clearInterval(timer);
   relogio.innerHTML = `00:00:00`;
   seconds = 0;
