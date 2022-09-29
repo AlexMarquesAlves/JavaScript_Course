@@ -30,5 +30,9 @@ function criaCalculadora() {
         }
       });
     },
+
+    btnToDisplay(valor) {
+      this.display.value += valor;
+    },
   };
 }
