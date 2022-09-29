@@ -74,6 +74,16 @@
 function Calculadora() {
   this.display = document.querySelector(`.display`);
 
+  this.clickCapture = () => {
+    document.addEventListener(`click`, (event) => {
+      const el = event.target;
+
+      if (el.classList.contains("btn-num")) {
+        this.addNumDisplay();
+      }
+    });
+  };
+
   this.start = () => {
     this.clickCapture();
   };
