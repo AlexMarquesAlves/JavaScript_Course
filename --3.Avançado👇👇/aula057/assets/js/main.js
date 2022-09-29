@@ -42,5 +42,23 @@ function criaCalculadora() {
     backSpace() {
       this.display.value = this.display.value.slice(0, -1);
     },
+
+    haceCuenta() {
+      let conta = this.display.value;
+
+      try {
+        conta = eval(conta);
+
+        if (!conta) {
+          alert(`Conta inválida`);
+          return;
+        }
+
+        this.display.value = String(conta);
+      } catch (e) {
+        alert(`Conta inválida`);
+        return;
+      }
+    },
   };
 }
