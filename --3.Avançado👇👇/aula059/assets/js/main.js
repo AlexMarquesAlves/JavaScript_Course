@@ -14,7 +14,24 @@ function Calculadora() {
       if (el.classList.contains("btn-del")) {
         this.del();
       }
+      if (el.classList.contains("btn-eq")) {
+        this.resolve();
+      }
     });
+  };
+
+  this.resolve = () => {
+    try {
+      const conta = eval(this.display.value);
+
+      if (!conta) {
+        alert("Conta inválida");
+        return;
+      }
+    } catch (error) {
+      alert("Conta inválida");
+      return;
+    }
   };
 
   this.addNumDisplay = (el) => {
