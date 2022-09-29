@@ -1,6 +1,20 @@
 function Calculadora() {
   this.display = document.querySelector(`.display`);
 
+  this.start = () => {
+    this.clickCapture();
+    this.enterCapture();
+  };
+
+  this.enterCapture = () => {
+    document.addEventListener("keyup", (e) => {
+      if (e.keyCode === 13) {
+        this.resolve();
+        return;
+      }
+    });
+  };
+
   this.clickCapture = () => {
     document.addEventListener(`click`, (event) => {
       const el = event.target;
@@ -42,10 +56,6 @@ function Calculadora() {
   };
   this.del = () => {
     this.display.value = this.display.slice(0, -1);
-  };
-
-  this.start = () => {
-    this.clickCapture();
   };
 }
 
