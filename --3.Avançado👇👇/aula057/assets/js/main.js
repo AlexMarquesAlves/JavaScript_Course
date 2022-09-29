@@ -43,6 +43,14 @@ function criaCalculadora() {
       this.display.value = this.display.value.slice(0, -1);
     },
 
+    pressEnter() {
+      this.display.addEventListener("keyup", (e) => {
+        if (e.keyCode === 13) {
+          this.haceCuenta();
+        }
+      });
+    },
+
     haceCuenta() {
       let conta = this.display.value;
 
