@@ -38,5 +38,9 @@ function criaCalculadora() {
     clearDisplay() {
       this.display.value = ``;
     },
+
+    backSpace() {
+      this.display.value = this.display.value.slice(0, -1);
+    },
   };
 }
