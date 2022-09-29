@@ -3,6 +3,11 @@
 // Construtora => Sempre iniciada com letra maiúscula... (new) 'Constructor'
 
 function Pessoa(nome, sobrenome) {
+  // Atributos Privados
+  const ID = 123456;
+
+  const metodoInterno = function () {};
+
   this.nome = nome;
   this.sobrenome = sobrenome;
 
@@ -13,3 +18,5 @@ function Pessoa(nome, sobrenome) {
 
 const p1 = new Pessoa("Luiz", "Otávio");
 const p1 = new Pessoa("Maria", "Oliveira");
+
+p2.metodo();
