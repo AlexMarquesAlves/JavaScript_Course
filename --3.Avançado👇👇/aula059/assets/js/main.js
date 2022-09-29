@@ -79,9 +79,13 @@ function Calculadora() {
       const el = event.target;
 
       if (el.classList.contains("btn-num")) {
-        this.addNumDisplay();
+        this.addNumDisplay(el);
       }
     });
+  };
+
+  this.addNumDisplay = (el) => {
+    this.display.value += el.innerText;
   };
 
   this.start = () => {
