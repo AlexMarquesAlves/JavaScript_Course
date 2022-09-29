@@ -71,6 +71,13 @@
 //   };
 // }
 
-function Calculadora() {}
+function Calculadora() {
+  this.display = document.querySelector(`.display`);
+
+  this.start = () => {
+    this.clickCapture();
+  };
+}
 
 const calculadora = new Calculadora();
+calculadora.start();
