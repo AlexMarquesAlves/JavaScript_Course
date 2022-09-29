@@ -11,6 +11,9 @@ function Calculadora() {
       if (el.classList.contains("btn-clear")) {
         this.clear();
       }
+      if (el.classList.contains("btn-del")) {
+        this.del();
+      }
     });
   };
 
@@ -19,6 +22,9 @@ function Calculadora() {
   };
   this.clear = () => {
     this.display.value = ``;
+  };
+  this.del = () => {
+    this.display.value = this.display.slice(0, -1);
   };
 
   this.start = () => {
