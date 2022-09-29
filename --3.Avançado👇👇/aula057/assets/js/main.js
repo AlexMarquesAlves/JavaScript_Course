@@ -7,5 +7,28 @@ function criaCalculadora() {
       this.buttonClicks();
       this.pressEnter();
     },
+
+    // Métodos
+    buttonClicks() {
+      document.addEventListener("click", (e) => {
+        const el = e.target;
+
+        if (el.classList.contains("btn-num")) {
+          this.btnToDisplay(el.innerText);
+        }
+
+        if (el.classList.contains("btn-clear")) {
+          this.clearDisplay();
+        }
+
+        if (el.classList.contains("btn-del")) {
+          this.backSpace();
+        }
+
+        if (el.classList.contains("btn-eq")) {
+          this.haceCuenta();
+        }
+      });
+    },
   };
 }
