@@ -34,5 +34,9 @@ function criaCalculadora() {
     btnToDisplay(valor) {
       this.display.value += valor;
     },
+
+    clearDisplay() {
+      this.display.value = ``;
+    },
   };
 }
