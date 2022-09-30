@@ -16,3 +16,6 @@ const nomes = ["Maria", "João", "Eduardo", "Gabriel", "Julia"];
 /* pop */
 const removidos = nomes.splice(-1, 1);
 console.log(nomes, removidos);
+/* shift */
+const removidos = nomes.splice(-1, 1);
+console.log(nomes, removidos);
