@@ -19,3 +19,6 @@ console.log(nomes, removidos);
 /* shift */
 const removidos = nomes.splice(-1, 1);
 console.log(nomes, removidos);
+/* push */
+nomes.splice(nomes.length, 0, "Luiz");
+console.log(nomes);
