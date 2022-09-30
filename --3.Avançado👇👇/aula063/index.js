@@ -22,3 +22,6 @@ console.log(nomes, removidos);
 /* push */
 nomes.splice(nomes.length, 0, "Luiz");
 console.log(nomes);
+/* unshift */
+const removidos = nomes.splice(0, 0, "Luiz", "Otávio");
+console.log(nomes, removidos);
