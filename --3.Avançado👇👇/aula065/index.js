@@ -17,7 +17,7 @@ console.log("----------------------------------------------------------------");
 
 // Retorne as pessoas que tem o nome com 5 letras ou mais
 // Retorne as pessoas com mais de 50 anos
-// Retorne as pessoas cujo nome termina com a
+// Retorne as pessoas cujo nome terminam com a
 const pessoas = [
   { nome: "Luiz", idade: 62 },
   { nome: "Maria", idade: 23 },
@@ -29,5 +29,9 @@ const pessoas = [
 
 const pessoasWithLargeName = pessoas.filter((obj) => obj.nome.length >= 5); // Filtrado pessoas com nome com 5 letras ou mais... ✔️
 const pessoasMoreThan50Years = pessoas.filter((obj) => obj.idade > 50); // Filtrado pessoas com mais de 50 anos... ✔️
+const nameEndsWithA = pessoas.filter((obj) =>
+  obj.nome.toLocaleLowerCase().endsWith("a")
+); // Filtrado pessoas cujo nome terminam com "a"... ✔️
 console.log(pessoasWithLargeName);
 console.log(pessoasMoreThan50Years);
+console.log(nameEndsWithA);
