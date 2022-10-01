@@ -26,3 +26,8 @@ const pessoas = [
   { nome: "Rosana", idade: 32 },
   { nome: "Wallace", idade: 47 },
 ];
+
+const pessoasWithLargeName = pessoas.filter((obj) => {
+  return obj.nome.length >= 5; // Filtrado pessoas com nome com 5 letras ou mais... ✔️
+});
+console.log(pessoasWithLargeName);
