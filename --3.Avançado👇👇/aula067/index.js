@@ -19,6 +19,11 @@ const oddNumber = numeros.reduce((acumulador, valor) => {
   if (valor % 2 !== 0) acumulador.push(valor);
   return acumulador;
 }, []); // valores ímpares do array... ✔️
+const doble = numeros.reduce((acumulador, valor) => {
+  acumulador.push(valor * 2);
+  return acumulador;
+}, []); // Dobrado os valores do array... ✔️
 console.log(total);
 console.log(evenNumber);
 console.log(oddNumber);
+console.log(doble);
