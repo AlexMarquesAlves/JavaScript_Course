@@ -15,5 +15,10 @@ const evenNumber = numeros.reduce((acumulador, valor) => {
   if (valor % 2 === 0) acumulador.push(valor);
   return acumulador;
 }, []); // valores pares do array... ✔️
+const oddNumber = numeros.reduce((acumulador, valor) => {
+  if (valor % 2 !== 0) acumulador.push(valor);
+  return acumulador;
+}, []); // valores ímpares do array... ✔️
 console.log(total);
 console.log(evenNumber);
+console.log(oddNumber);
