@@ -25,5 +25,12 @@ const pessoas = [
 
 const nomes = pessoas.map((obj) => obj.nome); // Retornado apenas string com nome das pessoas... ✔️
 const idades = pessoas.map((obj) => ({ idade: obj.idade })); // Retornado objeto com apenas idade das pessoas... ✔️
+
+const withID = pessoas.map((obj, index) => {
+  const newObj = { ...obj };
+  newObj.id = (index + 1) * 1000;
+  return newObj;
+}); // Adicionado chave ID ao objeto... ✔️
 console.log(nomes);
 console.log(idades);
+console.log(withID);
