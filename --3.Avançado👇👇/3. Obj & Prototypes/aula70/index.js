@@ -37,3 +37,13 @@ function criaPessoa(nome, sobrenome) {
 
 const p1 = criaPessoa("Luiz", "Otávio");
 console.log(p1.nomeCompleto);
+
+// Constructor function
+function Pessoa(nome, sobrenome) {
+  this.nome = nome;
+  this.sobrenome = sobrenome;
+}
+
+const p1 = new Pessoa("Luiz", "Otávio");
+const p2 = new Pessoa("Maria", "Miranda");
+console.log(p1);
