@@ -24,4 +24,6 @@ const pessoas = [
 ];
 
 const nomes = pessoas.map((obj) => obj.nome); // Retornado apenas string com nome das pessoas... ✔️
+const idades = pessoas.map((obj) => ({ idade: obj.idade })); // Retornado objeto com apenas idade das pessoas... ✔️
 console.log(nomes);
+console.log(idades);
