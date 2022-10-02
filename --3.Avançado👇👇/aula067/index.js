@@ -12,13 +12,17 @@ const total = numeros.reduce((acumulador, valor) => {
   return acumulador;
 }, 0); // Somado valores do array... ✔️
 const evenNumber = numeros.reduce((acumulador, valor) => {
-  if (valor % 2 === 0) acumulador.push(valor);
+  if (valor % 2 === 0) {
+    acumulador += valor;
+  }
   return acumulador;
-}, []); // valores pares do array... ✔️
+}, 0); // valores pares do array... ✔️
 const oddNumber = numeros.reduce((acumulador, valor) => {
-  if (valor % 2 !== 0) acumulador.push(valor);
+  if (valor % 2 !== 0) {
+    acumulador += valor;
+  }
   return acumulador;
-}, []); // valores ímpares do array... ✔️
+}, 0); // valores ímpares do array... ✔️
 const doble = numeros.reduce((acumulador, valor) => {
   acumulador.push(valor * 2);
   return acumulador;
