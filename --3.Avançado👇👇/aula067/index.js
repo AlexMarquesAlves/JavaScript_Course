@@ -11,4 +11,9 @@ const total = numeros.reduce((acumulador, valor) => {
   acumulador += valor;
   return acumulador;
 }, 0); // Somado valores do array... ✔️
+const evenNumber = numeros.reduce((acumulador, valor) => {
+  if (valor % 2 === 0) acumulador.push(valor);
+  return acumulador;
+}, []); // valores pares do array... ✔️
 console.log(total);
+console.log(evenNumber);
