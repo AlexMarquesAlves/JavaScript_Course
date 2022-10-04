@@ -12,10 +12,7 @@
  * Object.defineProperty (Define uma propriedade)
  */
 const produto = { nome: "Produto", preco: 1.8 };
-const caneca = {
-  ...produto,
-  material: "porcelana",
-};
+const caneca = Object.assign({}, produto, { material: "Porcelana" });
 
 caneca.nome = "Outro nome";
 caneca.preco = 2.5;
