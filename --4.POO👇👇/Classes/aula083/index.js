@@ -23,8 +23,7 @@ class DispositoEletronico {
   }
 }
 
-const d1 = new DispositoEletronico("Smartphone");
-d1.ligar();
-d1.ligar();
-d1.Desligar();
-console.log(d1);
+class Smartphone extends DispositoEletronico {}
+
+const s1 = new Smartphone("Iphone");
+console.log(s1);
