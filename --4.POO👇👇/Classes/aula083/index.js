@@ -23,7 +23,14 @@ class DispositoEletronico {
   }
 }
 
-class Smartphone extends DispositoEletronico {}
+class Smartphone extends DispositoEletronico {
+  constructor(nome, cor, modelo) {
+    super(nome);
 
-const s1 = new Smartphone("Iphone");
+    this.cor = cor;
+    this.modelo = modelo;
+  }
+}
+
+const s1 = new Smartphone("Samsung", "Preto", "Galaxy S10");
 console.log(s1);
