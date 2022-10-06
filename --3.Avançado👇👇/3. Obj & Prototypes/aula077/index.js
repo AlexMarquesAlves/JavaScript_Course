@@ -23,4 +23,8 @@ function ValidaCPF(cpfEnviado) {
   });
 }
 
+ValidaCPF.prototype.valida = function () {
+  return true;
+};
+
 const cpf = new ValidaCPF("070.987.720-03");
