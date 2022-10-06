@@ -22,3 +22,9 @@ class DispositoEletronico {
     this.ligado = false;
   }
 }
+
+const d1 = new DispositoEletronico("Smartphone");
+d1.ligar();
+d1.ligar();
+d1.Desligar();
+console.log(d1);
