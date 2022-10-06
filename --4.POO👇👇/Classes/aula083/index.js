@@ -13,5 +13,12 @@ class DispositoEletronico {
     this.ligado = true;
   }
 
-  desligar() {}
+  desligar() {
+    if (!this.ligado) {
+      console.log(this.nome + " já desligado");
+      return;
+    }
+
+    this.ligado = false;
+  }
 }
