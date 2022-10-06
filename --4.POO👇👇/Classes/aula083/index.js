@@ -4,7 +4,14 @@ class DispositoEletronico {
     this.ligado = false;
   }
 
-  ligar() {}
+  ligar() {
+    if (this.ligado) {
+      console.log(this.nome + " já ligado");
+      return;
+    }
+
+    this.ligado = true;
+  }
 
   desligar() {}
 }
