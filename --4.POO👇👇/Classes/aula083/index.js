@@ -3,4 +3,8 @@ class DispositoEletronico {
     this.nome = nome;
     this.ligado = false;
   }
+
+  ligar() {}
+
+  desligar() {}
 }
