@@ -32,5 +32,18 @@ class Smartphone extends DispositoEletronico {
   }
 }
 
+class Tablet extends DispositoEletronico {
+  constructor(nome, temWifi) {
+    super(nome);
+    this.temWifi = temWifi;
+  }
+
+  ligar() {
+    console.log("Olha, você alterou o método ligar.");
+  }
+}
+
 const s1 = new Smartphone("Samsung", "Preto", "Galaxy S10");
 console.log(s1);
+
+const t1 = Tablet("iPad", true);
