@@ -22,6 +22,18 @@ class ValidaFormulario {
     const senha = this.formulario.querySelector(".senha");
     const repetirSenha = this.formulario.querySelector(".repetir-senha");
 
+    if (senha.value !== repetirSenha.value) {
+      valid = false;
+      this.criaErro(
+        senha,
+        `Os campos senha e repetir senha precisam ser iguais`
+      );
+      this.criaErro(
+        repetirSenha,
+        `Os campos senha e repetir senha precisam ser iguais`
+      );
+    }
+
     return valid;
   }
 
