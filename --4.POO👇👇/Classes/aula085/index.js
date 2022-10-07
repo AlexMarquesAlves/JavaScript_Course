@@ -14,7 +14,12 @@ class ValidaCPF {
     return this.cpfLimpo.chartAt(0).repeat(11) === this.cpfLimpo;
   }
 
-  geraNovoCPF() {}
+  geraNovoCPF() {
+    const cpfSemDigitos = this.cpfLimpo.slice(0, -2);
+    const digito1 = this.geraNovoCPF(cpfSemDigitos);
+  }
+
+  geraDigito(cpfSemDigitos) {}
 
   valida() {
     if (!this.cpfLimpo) return false;
