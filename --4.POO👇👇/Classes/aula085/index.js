@@ -10,10 +10,14 @@ class ValidaCPF {
     });
   }
 
+  éSequencia() {
+    return this.cpfLimpo.chartAt(0).repeat(11) === this.cpfLimpo;
+  }
+
   valida() {
-    if (!this.cpflimpo) return false;
-    if (typeof this.cpflimpo !== "string") return false;
-    if (this.cpflimpo.lenght !== 11) return false;
+    if (!this.cpfLimpo) return false;
+    if (typeof this.cpfLimpo !== "string") return false;
+    if (this.cpfLimpo.lenght !== 11) return false;
 
     return `Cheguei aqui`;
   }
