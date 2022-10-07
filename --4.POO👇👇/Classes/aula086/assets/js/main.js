@@ -20,8 +20,9 @@ class ValidaFormulario {
     let valid = true;
 
     for (const campo of this.formulario.querySelector(".validar")) {
+      const label = campo.previousElementSibling.innerText;
       if (!campo.value) {
-        this.criaErro(campo, `O campo ${campo} não pode está em branco`);
+        this.criaErro(campo, `O campo ${label} não pode está em branco`);
         valid = false;
       }
     }
