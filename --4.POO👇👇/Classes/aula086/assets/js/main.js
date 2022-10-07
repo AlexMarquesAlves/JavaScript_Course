@@ -33,7 +33,18 @@ class ValidaFormulario {
       if (campo.classList.contains("cpf")) {
         if (!this.validaCPF(campo)) valid = false;
       }
+
+      if (campo.classList.contains("usuario")) {
+        if (!this.validaUsuario(campo)) valid = false;
+      }
     }
+  }
+
+  validaUsuario(campo) {
+    const usuario = campo.value;
+    let valid = true;
+
+    return valid;
   }
 
   validaCPF(campo) {
