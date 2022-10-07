@@ -19,6 +19,10 @@ class ValidaFormulario {
   camposSaoValidos() {
     let valid = true;
 
+    for (const errorText of this.formulario.querySelectorAll(".error-text")) {
+      errorText.remove();
+    }
+
     for (const campo of this.formulario.querySelector(".validar")) {
       const label = campo.previousElementSibling.innerText;
       if (!campo.value) {
