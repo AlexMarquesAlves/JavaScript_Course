@@ -16,7 +16,17 @@ class ValidaFormulario {
     const camposValidos = this.camposSaoValidos();
   }
 
-  camposSaoValidos() {}
+  camposSaoValidos() {
+    let valid = true;
+
+    for (const campo of this.formulario.querySelector(".validar")) {
+      if (!campo.value) {
+        this.criaErro();
+      }
+    }
+  }
+
+  criaErro(campo, msg) {}
 }
 
 const valida = new ValidaFormulario();
