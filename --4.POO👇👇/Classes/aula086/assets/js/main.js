@@ -29,7 +29,22 @@ class ValidaFormulario {
         this.criaErro(campo, `O campo ${label} não pode está em branco`);
         valid = false;
       }
+
+      if (campo.classList.contains("cpf")) {
+        if (!this.validaCPF(campo)) valid = false;
+      }
     }
+  }
+
+  validaCPF(campo) {
+    const cpf = new this.validaCPF(campo.value);
+
+    if (!cpf.valid) {
+      this.criaErro(campo, "CPF inválido");
+      return false;
+    }
+
+    return true;
   }
 
   criaErro(campo, msg) {
