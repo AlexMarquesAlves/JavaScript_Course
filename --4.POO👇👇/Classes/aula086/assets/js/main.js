@@ -34,6 +34,11 @@ class ValidaFormulario {
       );
     }
 
+    if (senha.length < 3 || senha.length < 12) {
+      this.criaErro(senha, "Senha precisa ter entre 3 e 12 caracteres");
+      valid = false;
+    }
+
     return valid;
   }
 
