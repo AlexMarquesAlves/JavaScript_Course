@@ -9,6 +9,8 @@ class ValidaCPF {
       value: cpfEnviado.replace(/\D+/g, ""),
     });
   }
+
+  valida() {}
 }
 
 const validacpf = new ValidaCPF(`070.987.720-03`);
