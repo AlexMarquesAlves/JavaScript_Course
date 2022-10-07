@@ -41,9 +41,17 @@ class Tablet extends DispositoEletronico {
   ligar() {
     console.log("Olha, você alterou o método ligar.");
   }
+
+  falaOi() {
+    console.log("Oi");
+  }
+
+  static criador(nome, temWifi) {
+    return new Tablet.prototype.constructor(nome, temWifi);
+  }
 }
 
 const s1 = new Smartphone("Samsung", "Preto", "Galaxy S10");
 console.log(s1);
 
-const t1 = Tablet("iPad", true);
+const t1 = Tablet.criador("iPad", true);
