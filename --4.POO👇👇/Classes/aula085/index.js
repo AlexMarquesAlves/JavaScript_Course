@@ -14,11 +14,14 @@ class ValidaCPF {
     return this.cpfLimpo.chartAt(0).repeat(11) === this.cpfLimpo;
   }
 
+  geraNovoCPF() {}
+
   valida() {
     if (!this.cpfLimpo) return false;
     if (typeof this.cpfLimpo !== "string") return false;
     if (this.cpfLimpo.lenght !== 11) return false;
     if (this.éSequencia()) return false;
+    if (!this.geraNovoCPF()) return false;
 
     return `Cheguei aqui`;
   }
