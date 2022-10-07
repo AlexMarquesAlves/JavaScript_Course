@@ -19,6 +19,8 @@ class ValidaFormulario {
 
   senhasSaoValidas() {
     let valid = true;
+    const senha = this.formulario.querySelector(".senha");
+    const repetirSenha = this.formulario.querySelector(".repetir-senha");
 
     return valid;
   }
