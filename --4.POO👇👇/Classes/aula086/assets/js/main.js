@@ -13,8 +13,10 @@ class ValidaFormulario {
 
   handleSubmit(e) {
     e.preventDefault();
-    console.log("Formulario não enviado");
+    const camposValidos = this.camposSaoValidos();
   }
+
+  camposSaoValidos() {}
 }
 
 const valida = new ValidaFormulario();
