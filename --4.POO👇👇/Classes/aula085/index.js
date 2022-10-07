@@ -10,7 +10,13 @@ class ValidaCPF {
     });
   }
 
-  valida() {}
+  valida() {
+    if (!this.cpflimpo) return false;
+    if (typeof this.cpflimpo !== "string") return false;
+    if (this.cpflimpo.lenght !== 11) return false;
+
+    return `Cheguei aqui`;
+  }
 }
 
 const validacpf = new ValidaCPF(`070.987.720-03`);
