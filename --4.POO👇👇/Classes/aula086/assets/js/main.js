@@ -22,6 +22,7 @@ class ValidaFormulario {
     for (const campo of this.formulario.querySelector(".validar")) {
       if (!campo.value) {
         this.criaErro(campo, `O campo ${campo} não pode está em branco`);
+        valid = false;
       }
     }
   }
@@ -30,6 +31,7 @@ class ValidaFormulario {
     const div = document.createElement("div");
     div.innerHTML = msg;
     div.classList.add("error-text");
+    campo.insertAdjacentElement("afterend", div);
   }
 }
 
