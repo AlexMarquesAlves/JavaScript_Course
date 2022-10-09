@@ -60,8 +60,8 @@ Promise.race(promisesRace)
   });
 
 // Promise.resolve
-function baixaPagina() {
-  const emCache = true;
+function baixaPagina1() {
+  const emCache = false;
 
   if (enCache) {
     return Promise.resolve("Página em cache");
@@ -70,6 +70,21 @@ function baixaPagina() {
   }
 }
 
-baixaPagina()
+baixaPagina1()
   .then((dadosPagina) => console.log(dadosPagina))
   .catch((e) => console.log(e));
+
+// Promise.reject
+function baixaPagina2() {
+  const emCache = true;
+
+  if (enCache) {
+    return Promise.reject("Página em cache");
+  } else {
+    return wait("Baixei a página");
+  }
+}
+
+baixaPagina2()
+  .then((dadosPagina) => console.log(dadosPagina))
+  .catch((e) => console.log("Error:", e));
