@@ -6,10 +6,12 @@ function rand(min, max) {
 
 function wait(msg, time) {
   return new Promise((resolve, reject) => {
-    if (typeof msg !== "string") reject("BAD VALUE");
+    if (typeof msg !== "string") reject(false);
+    return;
 
     setTimeout(() => {
       resolve(msg.toUpperCase() + `- Passei na promise`);
+      return;
     }, time);
   });
 }
@@ -22,15 +24,32 @@ function wait(msg, time) {
  */
 
 // Promise.all
-const promises = [
+const promisesAll = [
   `primeiro Valor`,
   wait(`Promise 1`, 3000),
   wait(`Promise 2`, 500),
   wait(`Promise 3`, 1000),
+  wait(`Promise 4`, 1000),
   `Outro Valor,`,
 ];
 
-Promise.all(promises)
+Promise.all(promisesAll)
+  .then((valor) => {
+    console.log(valor);
+  })
+  .catch((erro) => {
+    console.log(erro);
+  });
+
+// Promise.race
+const promisesRace = [
+  wait(`Promise 1`, rand(1, 5)),
+  wait(`Promise 2`, rand(1, 5)),
+  wait(`Promise 3`, rand(1, 5)),
+  // wait(1000, 1000),
+];
+
+Promise.race(promisesRace)
   .then((valor) => {
     console.log(valor);
   })
