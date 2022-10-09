@@ -6,10 +6,12 @@ function rand(min, max) {
 
 function wait(msg, time) {
   return new Promise((resolve, reject) => {
-    if (typeof msg !== "string") reject(false);
-    return;
-
     setTimeout(() => {
+      if (typeof msg !== "string") {
+        reject("Cai no erro");
+        return;
+      }
+
       resolve(msg.toUpperCase() + `- Passei na promise`);
       return;
     }, time);
@@ -43,10 +45,10 @@ Promise.all(promisesAll)
 
 // Promise.race
 const promisesRace = [
+  wait(1000, rand(1, 5)),
   wait(`Promise 1`, rand(1, 5)),
   wait(`Promise 2`, rand(1, 5)),
   wait(`Promise 3`, rand(1, 5)),
-  // wait(1000, 1000),
 ];
 
 Promise.race(promisesRace)
@@ -56,3 +58,18 @@ Promise.race(promisesRace)
   .catch((erro) => {
     console.log(erro);
   });
+
+// Promise.resolve
+function baixaPagina() {
+  const emCache = true;
+
+  if (enCache) {
+    return Promise.resolve("Página em cache");
+  } else {
+    return wait("Baixei a página");
+  }
+}
+
+baixaPagina()
+  .then((dadosPagina) => console.log(dadosPagina))
+  .catch((e) => console.log(e));
