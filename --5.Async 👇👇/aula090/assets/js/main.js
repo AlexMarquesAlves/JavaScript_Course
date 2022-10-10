@@ -1,14 +1,16 @@
 const request = (obj) => {
-  const xhr = new XMLHttpRequest();
-  xhr.open(obj.method, obj.url, true);
-  xhr.send();
+  return new Promise((resolve, reject) => {
+    const xhr = new XMLHttpRequest();
+    xhr.open(obj.method, obj.url, true);
+    xhr.send();
 
-  xhr.addEventListener("load", (e) => {
-    if (xhr.status >= 200 && xhr.status < 300) {
-      obj.success(xhr.responseText);
-    } else {
-      obj.error(xhr.statusText);
-    }
+    xhr.addEventListener("load", (e) => {
+      if (xhr.status >= 200 && xhr.status < 300) {
+        resolve(xhr.responseText);
+      } else {
+        reject(xhr.statusText);
+      }
+    });
   });
 };
 
@@ -25,16 +27,14 @@ document.addEventListener("click", (e) => {
 function carregaPage(el) {
   const href = el.getAttribute("href");
 
-  request({
+  const objConfig = {
     method: "GET",
     url: href,
-    success(response) {
-      carregaResultado(response);
-    },
-    error(errorText) {
-      console.log(errorText);
-    },
-  });
+  };
+
+  request(objConfig)
+    .then((response) => carregaResultado(response))
+    .catch((error) => console.error(error));
 }
 
 function carregaResultado(response) {
