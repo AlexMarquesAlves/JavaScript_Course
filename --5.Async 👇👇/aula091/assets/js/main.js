@@ -25,11 +25,16 @@ document.addEventListener("click", (e) => {
 });
 
 async function carregaPagina(el) {
-  const href = el.getAttribute("href");
-  const response = await fetch(href);
-  if (response.status !== 200) throw new Error("Error 404 ...nosso...");
-  const html = await response.text();
-  carregaResultado(html);
+  try {
+    const href = el.getAttribute("href");
+    const response = await fetch(href);
+    if (response.status !== 200) throw new Error("Error 404 ...nosso...");
+    const html = await response.text();
+
+    carregaResultado(html);
+  } catch (error) {
+    console.error(error);
+  }
 }
 
 function carregaResultado(response) {
