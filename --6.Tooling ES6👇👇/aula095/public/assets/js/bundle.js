@@ -1,2 +1,2 @@
-(()=>{"use strict";console.log("Luiz","Miranda",30),console.log(10);var o=new class{constructor(o,s){this.nome=o,this.sobrenome=s}}("Luiz","Otávio");console.log(o)})();
+(()=>{"use strict";console.log(10)})();
 //# sourceMappingURL=bundle.js.map
