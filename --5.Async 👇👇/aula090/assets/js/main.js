@@ -4,7 +4,7 @@ const request = (obj) => {
     xhr.open(obj.method, obj.url, true);
     xhr.send();
 
-    xhr.addEventListener("load", (e) => {
+    xhr.addEventListener("load", () => {
       if (xhr.status >= 200 && xhr.status < 300) {
         resolve(xhr.responseText);
       } else {
@@ -16,15 +16,15 @@ const request = (obj) => {
 
 document.addEventListener("click", (e) => {
   const el = e.target;
-  const tag = el.tagName.toLowercase();
+  const tag = el.tagName.toLowerCase();
 
   if (tag === "a") {
     e.preventDefault();
-    carregaPage(el);
+    carregaPagina(el);
   }
 });
 
-function carregaPage(el) {
+async function carregaPagina(el) {
   const href = el.getAttribute("href");
 
   const objConfig = {
@@ -32,9 +32,12 @@ function carregaPage(el) {
     url: href,
   };
 
-  request(objConfig)
-    .then((response) => carregaResultado(response))
-    .catch((error) => console.error(error));
+  try {
+    const response = await request(objConfig);
+    carregaResultado(response);
+  } catch (e) {
+    console.log(e);
+  }
 }
 
 function carregaResultado(response) {
