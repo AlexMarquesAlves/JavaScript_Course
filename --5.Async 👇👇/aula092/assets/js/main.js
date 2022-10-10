@@ -1,6 +1,8 @@
-fetch("pessoas.json")
-  .then((resposta) => resposta.json())
-  .then((json) => showOnPage(json));
+// fetch("pessoas.json")
+//   .then((resposta) => resposta.json())
+//   .then((json) => showOnPage(json));
+
+axios("pessoas.json").then((resposta) => showOnPage(resposta.data));
 
 function showOnPage(json) {
   const table = document.createElement("table");
