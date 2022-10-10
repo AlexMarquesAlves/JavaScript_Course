@@ -24,16 +24,12 @@ document.addEventListener("click", (e) => {
   }
 });
 
-function carregaPagina(el) {
+async function carregaPagina(el) {
   const href = el.getAttribute("href");
-
-  fetch(href)
-    .then((response) => {
-      if (response.status !== 200) throw new Error("Error 404 ...nosso...");
-      return response.text();
-    })
-    .then((html) => carregaResultado(html))
-    .catch((error) => console.error(error));
+  const response = await fetch(href);
+  if (response.status !== 200) throw new Error("Error 404 ...nosso...");
+  const html = await response.text();
+  carregaResultado(html);
 }
 
 function carregaResultado(response) {
