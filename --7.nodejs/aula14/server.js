@@ -1,5 +1,16 @@
+require("dotenv").config();
+
 const express = require("express");
 const app = express();
+const mongoose = require("mongoose");
+
+mongoose
+  .connect(process.env.CONNECTIONSTRING, { useNewUrlParser: true, useUnifiedTopology: true })
+  .then(() => {
+    app.emit("pronto");
+  })
+  .catch((e) => console.error(e));
+
 const routes = require("./routes");
 const path = require("path");
 const { middlewareGlobal } = require("./src/middlewares/middleware");
@@ -16,6 +27,8 @@ app.use(middlewareGlobal);
 app.use(routes);
 
 const port = 3000;
-app.listen(port, () => {
-  console.log(`🚀 HTTP server running on http://localhost:${port}`);
+app.on("pronto", () => {
+  app.listen(port, () => {
+    console.log(`🚀 HTTP server running on http://localhost:${port}`);
+  });
 });
