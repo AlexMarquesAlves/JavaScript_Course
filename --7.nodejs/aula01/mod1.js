@@ -20,4 +20,11 @@ class Pessoa {
   }
 }
 
-exports.Pessoa = Pessoa;
+const nome = "Luiz";
+const sobrenome = "Miranda";
+
+module.exports = {
+  nome,
+  sobrenome,
+  Pessoa,
+};
