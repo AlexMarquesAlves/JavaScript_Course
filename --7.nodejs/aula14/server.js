@@ -9,7 +9,7 @@ mongoose
   .then(() => {
     app.emit("pronto");
   })
-  .catch((e) => console.error(e));
+  .catch((e) => console.log(e));
 
 const routes = require("./routes");
 const path = require("path");
