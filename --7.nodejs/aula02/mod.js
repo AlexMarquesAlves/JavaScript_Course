@@ -4,4 +4,15 @@
 // };
 
 /** Numero */
-module.exports = 2;
+// module.exports = 2;
+
+/** Classe */
+module.exports = class Dog {
+  constructor(name) {
+    this.name = name;
+  }
+
+  latir() {
+    console.log(`${this.name} está fazendo au au`);
+  }
+};
