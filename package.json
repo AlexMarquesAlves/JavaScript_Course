@@ -21,6 +21,7 @@
     "prettier": "^2.2.1"
   },
   "dependencies": {
+    "react-icons": "^4.6.0",
     "sass": "^1.55.0"
   }
 }

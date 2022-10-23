@@ -1,6 +1,10 @@
 import React, { Component } from "react";
 import "./styles.scss";
 
+// form
+// eslint-disable-next-line import/no-extraneous-dependencies
+import { FaPlus } from "react-icons/fa";
+
 export default class Main extends Component {
   state = {
     novaTarefa: "",
@@ -20,9 +24,11 @@ export default class Main extends Component {
       <div className="main">
         <h1>Lista de tarefas</h1>
 
-        <form action="#">
-          <input type="text" onChange={this.handleChange} />
-          <button type="submit">Enviar</button>
+        <form action="#" className="form">
+          <input type="text" onChange={this.handleChange} value={novaTarefa} />
+          <button type="submit">
+            <FaPlus />
+          </button>
         </form>
       </div>
     );
