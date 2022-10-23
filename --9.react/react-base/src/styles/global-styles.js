@@ -1,6 +1,10 @@
+import { createGlobalStyle } from "styled-components";
+
+export const GlobalStyles = createGlobalStyle`
+
 :root {
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 24px;
   font-weight: 400;
 
@@ -68,3 +72,5 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+`;

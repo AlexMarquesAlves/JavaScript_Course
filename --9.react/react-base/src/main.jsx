@@ -1,11 +1,12 @@
-/* eslint-disable no-unused-vars */
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./App";
-import "./index.css";
+import { App } from "./App";
+import { MyThemeProvider } from "./styles/MyThemeProvider";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <App />
+    <MyThemeProvider>
+      <App />
+    </MyThemeProvider>
   </React.StrictMode>,
 );
