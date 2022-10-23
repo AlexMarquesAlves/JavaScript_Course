@@ -25,6 +25,7 @@ export default function Tarefas({ tarefas, handleEdit, handleDelete }) {
 }
 
 Tarefas.propTypes = {
+  // eslint-disable-next-line react/forbid-prop-types
   tarefas: PropTypes.array.isRequired,
   handleEdit: PropTypes.func.isRequired,
   handleDelete: PropTypes.func.isRequired,
