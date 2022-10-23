@@ -1,30 +1,31 @@
-/* eslint-disable import/no-duplicates */
 import React, { Component } from "react";
+import Form from "../Form";
+import Tarefas from "../Tarefas";
+
 import "./styles.scss";
-
-// form
-// eslint-disable-next-line import/no-extraneous-dependencies
-import { FaPlus } from "react-icons/fa";
-
-// tarefas
-// eslint-disable-next-line import/no-extraneous-dependencies
-import { FaEdit, FaWindowClose } from "react-icons/fa";
 
 export default class Main extends Component {
   state = {
     novaTarefa: "",
-    tarefas: [
-      "Preparar chá",
-      "Beber chá",
-      "Estudar",
-      "Ir trabalhar",
-      "Almoçar",
-      "Voltar ao trabalho",
-      "Jantar",
-      "Dormir",
-    ],
+    tarefas: [],
     index: -1,
   };
+
+  componentDidMount() {
+    const tarefas = JSON.parse(localStorage.getItem("tarefas"));
+
+    if (!tarefas) return;
+
+    this.setState({ tarefas });
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    const { tarefas } = this.state;
+
+    if (tarefas === prevState.tarefas) return;
+
+    localStorage.setItem("tarefas", JSON.stringify(tarefas));
+  }
 
   handleSubmit = (e) => {
     e.preventDefault();
@@ -47,7 +48,6 @@ export default class Main extends Component {
       this.setState({
         tarefas: [...novasTarefas],
         index: -1,
-        novaTarefa: "",
       });
     }
   };
@@ -78,37 +78,23 @@ export default class Main extends Component {
   };
 
   render() {
-    // eslint-disable-next-line no-unused-vars
     const { novaTarefa, tarefas } = this.state;
 
     return (
       <div className="main">
         <h1>Lista de tarefas</h1>
 
-        <form onSubmit={this.handleSubmit} action="#" className="form">
-          <input type="text" onChange={this.handleChange} value={novaTarefa} />
-          <button type="submit">
-            <FaPlus />
-          </button>
-        </form>
+        <Form
+          handleSubmit={this.handleSubmit}
+          handleChange={this.handleChange}
+          novaTarefa={novaTarefa}
+        />
 
-        <ul className="tarefas">
-          {tarefas.map((tarefa, index) => (
-            <li key={tarefa}>
-              {tarefa}
-              <span>
-                <FaEdit
-                  className="edit"
-                  onClick={(e) => this.handleEdit(e, index)}
-                />
-                <FaWindowClose
-                  className="delete"
-                  onClick={(e) => this.handleDelete(e, index)}
-                />
-              </span>
-            </li>
-          ))}
-        </ul>
+        <Tarefas
+          tarefas={tarefas}
+          handleEdit={this.handleEdit}
+          handleDelete={this.handleDelete}
+        />
       </div>
     );
   }
