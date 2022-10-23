@@ -1,3 +1,4 @@
+/* eslint-disable import/no-duplicates */
 import React, { Component } from "react";
 import "./styles.scss";
 
@@ -13,9 +14,14 @@ export default class Main extends Component {
   state = {
     novaTarefa: "",
     tarefas: [
-      // "Preparar chá",
-      // "Beber chá",
-      // "Estudar",
+      "Preparar chá",
+      "Beber chá",
+      "Estudar",
+      "Ir trabalhar",
+      "Almoçar",
+      "Voltar ao trabalho",
+      "Jantar",
+      "Dormir",
     ],
   };
 
@@ -40,6 +46,18 @@ export default class Main extends Component {
     });
   };
 
+  // handleEdit = (e, index) => {};
+
+  handleDelete = (e, index) => {
+    const { tarefas } = this.state;
+    const novasTarefas = [...tarefas];
+    novasTarefas.splice(index, 1);
+
+    this.setState({
+      tarefas: [...novasTarefas],
+    });
+  };
+
   render() {
     // eslint-disable-next-line no-unused-vars
     const { novaTarefa, tarefas } = this.state;
@@ -56,12 +74,18 @@ export default class Main extends Component {
         </form>
 
         <ul className="tarefas">
-          {tarefas.map((tarefa) => (
+          {tarefas.map((tarefa, index) => (
             <li key={tarefa}>
               {tarefa}
               <span>
-                <FaEdit className="edit" />
-                <FaWindowClose className="delete" />
+                <FaEdit
+                  className="edit"
+                  onClick={(e) => this.handleEdit(e, index)}
+                />
+                <FaWindowClose
+                  className="delete"
+                  onClick={(e) => this.handleDelete(e, index)}
+                />
               </span>
             </li>
           ))}
