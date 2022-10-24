@@ -1,9 +1,13 @@
-import { Container } from './styles';
+import { Container } from "../../styles/global-styles";
+import * as Styled from "./styles";
 
 export const Login = () => {
   return (
     <Container>
-      <h1>Login</h1>
+      <Styled.Title>
+        Login
+        <small>Oie</small>
+      </Styled.Title>
     </Container>
   );
 };

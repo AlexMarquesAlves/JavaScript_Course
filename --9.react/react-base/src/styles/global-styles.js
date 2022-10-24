@@ -1,76 +1,67 @@
-import { createGlobalStyle } from "styled-components";
+import styled, { createGlobalStyle, css } from "styled-components";
 
 export const GlobalStyles = createGlobalStyle`
+  ${({ theme }) => css`
+    // Reset CSS
+    * {
+      margin: 0;
+      padding: 0;
+      outline: 0;
+      // box-sizing: border-box;
+    }
 
-:root {
-  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
-  font-size: 1rem;
-  line-height: 24px;
-  font-weight: 400;
+    body {
+      background-color: ${theme.colors.primaryDarkColor};
+      color: ${theme.colors.primaryColor};
+    }
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+    button {
+      cursor: pointer;
+      background: ${theme.colors.primaryColor};
+      border: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      font-weight: 700;
+    }
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
-}
+    html, body{
+      height: 100%
+    }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
+    a {
+      text-decoration: none;
+    }
 
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
+    ul {
+      list-style: none;
+    }
+    // Reset CSS
+    :root {
+      font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+      font-size: 1rem;
+      line-height: 24px;
+      font-weight: 400;
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
+      color-scheme: light dark;
+      color: rgba(255, 255, 255, 0.87);
+      background-color: #0a4f70;
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
+      font-synthesis: none;
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      -webkit-text-size-adjust: 100%;
+    }
+  `}
+`;
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
-}
-
+export const Container = styled.div`
+  ${({ theme }) => css`
+    max-width:360px;
+    background: #0a4f70;
+    margin: 30px auto;
+    padding: 30px;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  `}
 `;
