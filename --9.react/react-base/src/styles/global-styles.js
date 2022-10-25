@@ -17,7 +17,7 @@ export const GlobalStyles = createGlobalStyle`
       line-height: 24px;
       font-weight: 400;
       background-color: ${theme.colors.primaryDarkColor};
-      color: ${theme.colors.primaryColor};
+      color: ${theme.colors.primaryDarkColor};
     }
 
     html, body, #root {
