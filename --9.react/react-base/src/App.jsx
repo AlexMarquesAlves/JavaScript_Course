@@ -1,14 +1,15 @@
 import React from "react";
+import { Router } from "react-router-dom";
 import { Header } from "./components/Header";
-import { BrowserRouter, Router } from "react-router-dom";
 import { Routes } from "./routes";
+import { history } from "./services/history";
 
 export const App = () => {
   return (
-    <BrowserRouter>
+    <Router history={history}>
       <Header />
       <Routes />
       <global-styles />
-    </BrowserRouter>
+    </Router>
   );
 };
