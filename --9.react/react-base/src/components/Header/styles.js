@@ -2,7 +2,7 @@ import styled, { css } from "styled-components";
 
 export const Nav = styled.nav`
   ${({ theme }) => css`
-    background: ${theme.primaryColor};
+    background: ${theme.colors.primaryColor};
     padding: 20px;
     display: flex;
     align-items: center;
