@@ -1,7 +1,8 @@
 import PropTypes from "prop-types";
+import React from "react";
 import { Redirect, Route } from "react-router-dom";
 
-export const MyRoute = (component: Component, isClosed, ...rest) => {
+export const MyRoute = ({ component: Component, isClosed, ...rest }) => {
   const isLoggedIn = false;
 
   if (isClosed && !isLoggedIn) {
@@ -16,6 +17,6 @@ MyRoute.defaultProps = {
 };
 
 MyRoute.propTypes = {
-  component: PropTypes.oneOfType([PropTypes.element, propTypes.func]).isRequired,
+  component: PropTypes.oneOfType([PropTypes.element, PropTypes.func]).isRequired,
   isClosed: PropTypes.bool,
 };
