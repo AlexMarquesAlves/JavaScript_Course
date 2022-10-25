@@ -1,3 +1,4 @@
+import "react-toastify/dist/ReactToastify.css";
 import styled, { createGlobalStyle, css } from "styled-components";
 
 export const GlobalStyles = createGlobalStyle`
@@ -40,6 +41,16 @@ export const GlobalStyles = createGlobalStyle`
 
     ul {
       list-style: none;
+    }
+
+    body .Toastify .Toastify__toast-container .Toastify__toast--success {
+      background: ${theme.colors.successColor};
+      color: #fff
+    }
+
+    body .Toastify .Toastify__toast-container .Toastify__toast--error {
+      background: ${theme.colors.errorColor};
+      color: #fff
     }
   `}
 `;
