@@ -1,5 +1,5 @@
 import { useDispatch } from "react-redux";
-import { clicaBotao } from "../../store/modules/example/actions";
+import * as exampleActions from "../../store/modules/example/actions";
 import { Container } from "../../styles/global-styles";
 import { Paragrafo, Title } from "./styles";
 
@@ -9,7 +9,7 @@ export const Login = () => {
   function handleClick(e) {
     e.preventDefault();
 
-    dispatch(clicaBotao());
+    dispatch(exampleActions.clicaBotaoRequest());
   }
 
   return (
