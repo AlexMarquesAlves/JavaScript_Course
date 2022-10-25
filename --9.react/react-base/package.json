@@ -11,13 +11,13 @@
     "build-storybook": "build-storybook"
   },
   "dependencies": {
+    "history": "^4.10.1",
+    "prettier": "^2.6.2",
     "prop-types": "^15.8.1",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-icons": "^3.8.0",
-    "history": "^4.10.1",
     "react-router-dom": "^5.2.0",
-    "prettier": "^2.6.2",
     "styled-components": "^5.3.5"
   },
   "devDependencies": {

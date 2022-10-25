@@ -1,13 +1,14 @@
 import React from "react";
-import { Switch, Route, BrowserRouter } from "react-router-dom";
+import { Switch } from "react-router-dom";
 import { Login } from "../pages/Login";
 import { Page404 } from "../pages/Page404";
+import { MyRoute } from "./MyRoute";
 
 export const Routes = () => {
   return (
     <Switch>
-      <Route exact path="/" component={Login} />
-      <Route path="*" component={Page404} />
+      <MyRoute exact path="/" component={Login} />
+      <MyRoute path="*" component={Page404} />
     </Switch>
   );
 };
