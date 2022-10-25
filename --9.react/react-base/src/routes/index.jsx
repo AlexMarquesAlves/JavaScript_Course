@@ -5,11 +5,9 @@ import { Page404 } from "../pages/Page404";
 
 export const Routes = () => {
   return (
-    <BrowserRouter>
-      <Switch>
-        <Route exact path="/" component={Login} />
-        <Route path="*" component={Page404} />
-      </Switch>
-    </BrowserRouter>
+    <Switch>
+      <Route exact path="/" component={Login} />
+      <Route path="*" component={Page404} />
+    </Switch>
   );
 };

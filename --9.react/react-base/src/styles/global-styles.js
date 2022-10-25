@@ -27,7 +27,7 @@ export const GlobalStyles = createGlobalStyle`
       cursor: pointer;
       background: ${theme.colors.primaryColor};
       border: none;
-      color: #fff;
+      color: #c1c1c1;
       padding: 10px 20px;
       border-radius: 4px;
       font-weight: 700;
@@ -47,7 +47,7 @@ export const GlobalStyles = createGlobalStyle`
 export const Container = styled.div`
   ${({ theme }) => css`
     max-width:360px;
-    background: #0a4f70;
+    background: #c1c1c1;
     margin: 30px auto;
     padding: 30px;
     border-radius: 4px;
