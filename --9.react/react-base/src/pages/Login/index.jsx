@@ -1,4 +1,5 @@
 import { useDispatch } from "react-redux";
+import { clicaBotao } from "../../store/modules/example/actions";
 import { Container } from "../../styles/global-styles";
 import { Paragrafo, Title } from "./styles";
 
@@ -8,9 +9,7 @@ export const Login = () => {
   function handleClick(e) {
     e.preventDefault();
 
-    dispatch({
-      type: "BOTAO_CLICADO",
-    });
+    dispatch(clicaBotao());
   }
 
   return (

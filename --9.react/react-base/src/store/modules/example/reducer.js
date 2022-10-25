@@ -1,10 +1,8 @@
-import { createStore } from "redux";
-
 const initialState = {
   botaoClicado: false,
 };
 
-const reducer = (state = initialState, action) => {
+export default function reducer(state = initialState, action) {
   switch (action.type) {
     case "BOTAO_CLICADO":
       const newState = { ...state };
@@ -14,6 +12,4 @@ const reducer = (state = initialState, action) => {
     default:
       return state;
   }
-};
-
-export const store = createStore(reducer);
+}

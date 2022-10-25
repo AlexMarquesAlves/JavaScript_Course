@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { Nav } from "./styles";
 
 export const Header = () => {
-  const botaoClicado = useSelector((state) => state.botaoClicado);
+  const botaoClicado = useSelector((state) => state.example.botaoClicado);
 
   return (
     <Nav>
