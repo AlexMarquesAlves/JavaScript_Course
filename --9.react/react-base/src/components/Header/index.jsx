@@ -18,7 +18,7 @@ export const Header = () => {
       <Link to={"/asdasd"}>
         <FaSignInAlt size={24} />
       </Link>
-      {botaoClicado ? "clicado" : "Não clicado"}
+      <div>{botaoClicado ? <h2>Clicado</h2> : <h2>Não Clicado</h2>}</div>
     </Nav>
   );
 };

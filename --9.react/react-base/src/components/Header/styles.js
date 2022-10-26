@@ -9,8 +9,7 @@ export const Nav = styled.nav`
     justify-content: center;
 
     a {
-      color: rgba(255, 255, 255, 0.87);
-
+      color: #fff;
     }
   `}
 `;
