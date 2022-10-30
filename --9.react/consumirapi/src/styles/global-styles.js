@@ -31,8 +31,13 @@ export const GlobalStyles = createGlobalStyle`
       color: #c1c1c1;
       padding: 10px 20px;
       border-radius: 4px;
-      font-weight: 700;
+      font-weight: 700;transition: all 300ms;
+
+      &:hover {
+        filter: brightness(75%);
+      }
     }
+
 
     a {
       text-decoration: none;
