@@ -12,11 +12,7 @@ import homeRoutes from "./routes/homeRoutes";
 import tokenRoutes from "./routes/tokenRoutes";
 import userRoutes from "./routes/userRoutes";
 
-const whiteList = [
-  "https://react1.otaviomiranda.com.br",
-  "https://react2.otaviomiranda.com.br",
-  "http://localhost:3003",
-];
+const whiteList = ["http://localhost:3003", "http://localhost:5173"];
 
 const corsOptions = {
   origin: function (origin, callback) {

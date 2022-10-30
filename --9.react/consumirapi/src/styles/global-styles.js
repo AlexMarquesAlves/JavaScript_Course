@@ -44,20 +44,18 @@ export const GlobalStyles = createGlobalStyle`
     }
 
     body .Toastify .Toastify__toast-container .Toastify__toast--success {
-      background: ${theme.colors.successColor};
-      color: #fff
+      background: ${theme.colors.successColor}
     }
 
     body .Toastify .Toastify__toast-container .Toastify__toast--error {
-      background: ${theme.colors.errorColor};
-      color: #fff
+      background: ${theme.colors.errorColor}
     }
   `}
 `;
 
 export const Container = styled.div`
   ${({ theme }) => css`
-    max-width:360px;
+    max-width: 480px;
     background: #c1c1c1;
     margin: 30px auto;
     padding: 30px;
