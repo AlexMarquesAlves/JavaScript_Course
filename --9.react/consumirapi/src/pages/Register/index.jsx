@@ -1,5 +1,9 @@
+import { get } from "lodash";
 import React, { useState } from "react";
-// import { isEmail } from "validator";
+import { toast } from "react-toastify";
+import { isEmail } from "validator";
+import axios from "../../services/axios";
+import { history } from "../../services/history";
 import { Container } from "../../styles/global-styles";
 import { Form } from "./styles";
 
@@ -11,6 +15,37 @@ export const Register = () => {
   async function handleSubmit(e) {
     e.preventDefault();
     let formErrors = false;
+
+    if (nome.length < 3 || nome.length > 255) {
+      formErrors = true;
+      toast.error("Nome deve ter entre 3 e 255 caracteres");
+    }
+
+    if (!isEmail(email)) {
+      formErrors = true;
+      toast.error("E-mail inválido.");
+    }
+
+    if (password.length < 6 || password.length > 50) {
+      formErrors = true;
+      toast.error("Senha deve ter entre 6 e 50 caracteres");
+    }
+
+    if (formErrors) return;
+
+    try {
+      await axios.post("/users/", {
+        nome,
+        password,
+        email,
+      });
+      toast.success("Você fez seu cadastro");
+      history.push("/login");
+    } catch (err) {
+      const errors = get(err, "response.data.errors", []);
+
+      errors.map((error) => toast.error(error));
+    }
   }
 
   return (
