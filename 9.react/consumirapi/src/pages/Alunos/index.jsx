@@ -1,15 +1,14 @@
 import { get } from "lodash";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { FaEdit, FaExclamation, FaUserCircle, FaWindowClose } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import { Loading } from "../../components/Loading";
+import { toast } from "react-toastify";
+import Loading from "../../components/Loading";
 import axios from "../../services/axios";
 import { Container } from "../../styles/global-styles";
-import { AlunoContainer, ProfilePicture } from "./styles";
+import { AlunoContainer, NovoAluno, ProfilePicture } from "./styles";
 
-import { toast } from "react-toastify";
-
-export const Alunos = () => {
+export default function Alunos() {
   const [alunos, setAlunos] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
 
@@ -60,6 +59,8 @@ export const Alunos = () => {
 
       <h1>Alunos</h1>
 
+      <NovoAluno to="/aluno/">Novo aluno</NovoAluno>
+
       <AlunoContainer>
         {alunos.map((aluno, index) => (
           <div key={String(aluno.id)}>
@@ -93,4 +94,4 @@ export const Alunos = () => {
       </AlunoContainer>
     </Container>
   );
-};
+}

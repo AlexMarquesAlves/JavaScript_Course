@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled, { css } from "styled-components";
 
 export const AlunoContainer = styled.div`
@@ -48,5 +49,12 @@ export const ProfilePicture = styled.div`
         transform: scale(1.1);
       }
     }
+  `}
+`;
+
+export const NovoAluno = styled(Link)`
+  ${({ theme }) => css`
+    display: block;
+    padding: 20px 0 10px 0;
   `}
 `;

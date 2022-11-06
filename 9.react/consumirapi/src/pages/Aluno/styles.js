@@ -1,13 +1,17 @@
 import styled, { css } from "styled-components";
 
-export const Title = styled.h1`
+export const Form = styled.form`
   ${({ theme }) => css`
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
 
-  `}
-`;
-
-export const Paragrafo = styled.p`
-  ${({ theme }) => css`
-
+    input {
+      height: 40px;
+      margin-bottom: 20px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      padding: 0 10px;
+    }
   `}
 `;
