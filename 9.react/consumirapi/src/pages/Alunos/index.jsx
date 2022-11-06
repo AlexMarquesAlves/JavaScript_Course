@@ -3,12 +3,12 @@ import React, { useEffect, useState } from "react";
 import { FaEdit, FaExclamation, FaUserCircle, FaWindowClose } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
-import Loading from "../../components/Loading";
+import { Loading } from "../../components/Loading";
 import axios from "../../services/axios";
 import { Container } from "../../styles/global-styles";
 import { AlunoContainer, NovoAluno, ProfilePicture } from "./styles";
 
-export default function Alunos() {
+export function Alunos() {
   const [alunos, setAlunos] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
 

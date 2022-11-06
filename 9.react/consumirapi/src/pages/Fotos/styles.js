@@ -2,12 +2,33 @@ import styled, { css } from "styled-components";
 
 export const Title = styled.h1`
   ${({ theme }) => css`
-
+    text-align: center;
   `}
 `;
 
-export const Paragrafo = styled.p`
+export const Form = styled.form`
   ${({ theme }) => css`
+    label {
+      width: 180px;
+      height: 180px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #eee;
+      border: 5px dashed ${theme.colors.primaryColor};
+      margin: 30px auto;
+      cursor: pointer;
+      border-radius: 50%;
+      overflow: hidden;
 
+      img {
+        width: 180px;
+        height: 180px;
+      }
+    }
+
+    input {
+      display: none;
+    }
   `}
 `;
