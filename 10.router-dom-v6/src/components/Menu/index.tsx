@@ -15,6 +15,12 @@ export const Menu = ({ title }: MenuProps) => {
         <li>
           <Link to="/about">About</Link>
         </li>
+        <li>
+          <Link to="/posts">Posts</Link>
+        </li>
+        <li>
+          <Link to="/posts/10">Post 10</Link>
+        </li>
       </ul>
     </nav>
   );
