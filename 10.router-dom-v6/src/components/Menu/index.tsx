@@ -13,7 +13,9 @@ export const Menu = ({ title }: MenuProps) => {
           <Link to="/">Home</Link>
         </li>
         <li>
-          <Link to="/about">About</Link>
+          <Link to="/about" state={"this is state from ABOUT"}>
+            About
+          </Link>
         </li>
         <li>
           <Link to="/posts">Posts</Link>

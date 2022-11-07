@@ -19,7 +19,10 @@ export const Redirect = ({ title }: RedirectProps) => {
     }, 1000);
 
     const timeEqualOrBellowZero = time <= 0;
-    if (timeEqualOrBellowZero) navigate("/");
+    if (timeEqualOrBellowZero)
+      navigate("/about", {
+        state: `This is the state: ${Math.random()}`,
+      });
 
     return () => {
       clearTimeout(timeout.current);
