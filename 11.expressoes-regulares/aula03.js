@@ -1,11 +1,19 @@
-const { texto } = require("./base");
+const { texto, arquivos } = require("./base");
 
 // * (opcionais) 0 ou n vezes
 // + (obrigatório) 1 ou n vezes
 // ? (opcionais) 0 ou n vezes
+// \ caractere de escape
 
-console.log(texto);
+// console.log(texto);
+// const regExp1 = /Jo+ão+/gi;
+// console.log(texto.match(regExp1));
 
-const regExp1 = /Jo+ão+/gi;
+const regExp2 = /\.jpe?g/gi;
 
-console.log(texto.match(regExp1));
+for (const arquivo of arquivos) {
+  const valido = arquivo.match(regExp2);
+  if (!valido) continue;
+
+  console.log(arquivo, valido);
+}
