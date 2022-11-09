@@ -1,4 +1,3 @@
-const nome = "Leonardo";
-const sobrenome = "Xavier";
+import funcao from "./mod";
 
-console.log(nome, sobrenome);
+funcao();
