@@ -17,7 +17,13 @@ var password = document.querySelector(".password");
 var password2 = document.querySelector(".password2");
 form.addEventListener("submit", function (event) {
     event.preventDefault();
+    hideErrorMessages(this);
 });
+function hideErrorMessages(form) {
+    form
+        .querySelectorAll("." + SHOW_ERROR_MESSAGES)
+        .forEach(function (item) { return item.classList.remove(SHOW_ERROR_MESSAGES); });
+}
 
 
 /***/ })

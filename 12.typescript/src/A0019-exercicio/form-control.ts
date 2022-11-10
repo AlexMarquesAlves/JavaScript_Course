@@ -8,4 +8,11 @@ const password2 = document.querySelector(".password2") as HTMLInputElement;
 
 form.addEventListener("submit", function (event: Event) {
   event.preventDefault();
+  hideErrorMessages(this);
 });
+
+function hideErrorMessages(form: HTMLFormElement): void {
+  form
+    .querySelectorAll("." + SHOW_ERROR_MESSAGES)
+    .forEach((item) => item.classList.remove(SHOW_ERROR_MESSAGES));
+}
