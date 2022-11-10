@@ -2,34 +2,13 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./src/A0018-webpack/index.ts":
-/*!************************************!*\
-  !*** ./src/A0018-webpack/index.ts ***!
-  \************************************/
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+/***/ "./src/A0019-exercicio/form-control.ts":
+/*!*********************************************!*\
+  !*** ./src/A0019-exercicio/form-control.ts ***!
+  \*********************************************/
+/***/ (() => {
 
 
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-var mod_1 = __importDefault(__webpack_require__(/*! ./mod */ "./src/A0018-webpack/mod.ts"));
-mod_1.default();
-
-
-/***/ }),
-
-/***/ "./src/A0018-webpack/mod.ts":
-/*!**********************************!*\
-  !*** ./src/A0018-webpack/mod.ts ***!
-  \**********************************/
-/***/ ((__unused_webpack_module, exports) => {
-
-
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports["default"] = (function () {
-    console.log("Sou o módulo.");
-});
 
 
 /***/ })
@@ -54,19 +33,26 @@ exports["default"] = (function () {
 /******/ 		};
 /******/ 	
 /******/ 		// Execute the module function
-/******/ 		__webpack_modules__[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
 /******/ 	
 /******/ 		// Return the exports of the module
 /******/ 		return module.exports;
 /******/ 	}
 /******/ 	
 /************************************************************************/
-/******/ 	
-/******/ 	// startup
-/******/ 	// Load entry module and return exports
-/******/ 	// This entry module is referenced by other modules so it can't be inlined
-/******/ 	var __webpack_exports__ = __webpack_require__("./src/A0018-webpack/index.ts");
-/******/ 	
+var __webpack_exports__ = {};
+// This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
+(() => {
+var exports = __webpack_exports__;
+/*!************************************************!*\
+  !*** ./src/A0019-exercicio/A0019-exercicio.ts ***!
+  \************************************************/
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+__webpack_require__(/*! ./form-control */ "./src/A0019-exercicio/form-control.ts");
+
+})();
+
 /******/ })()
 ;
 //# sourceMappingURL=bundle.js.map
