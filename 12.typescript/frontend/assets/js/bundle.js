@@ -26,6 +26,8 @@ form.addEventListener("submit", function (event) {
     checkForEmptyFields(username, email, password, password2);
     checkEmail(email);
     checkEqualPasswords(password, password2);
+    if (shouldSendForm(this))
+        console.log("FORMULÁRIO ENVIADO");
 });
 function checkForEmptyFields() {
     var inputs = [];
@@ -57,6 +59,13 @@ function showErrorMessage(input, msg) {
     var errorMessage = formFields.querySelector(".error-message");
     errorMessage.innerText = msg;
     formFields.classList.add(SHOW_ERROR_MESSAGES);
+}
+function shouldSendForm(form) {
+    var send = true;
+    form
+        .querySelectorAll("." + SHOW_ERROR_MESSAGES)
+        .forEach(function () { return (send = false); });
+    return send;
 }
 
 
