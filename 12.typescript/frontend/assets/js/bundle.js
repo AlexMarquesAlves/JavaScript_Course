@@ -25,6 +25,7 @@ form.addEventListener("submit", function (event) {
     hideErrorMessages(this);
     checkForEmptyFields(username, email, password, password2);
     checkEmail(email);
+    checkEqualPasswords(password, password2);
 });
 function checkForEmptyFields() {
     var inputs = [];
@@ -39,6 +40,12 @@ function checkForEmptyFields() {
 function checkEmail(input) {
     if (!isEmail_1.default(input.value))
         showErrorMessage(input, "Email inválido");
+}
+function checkEqualPasswords(password, password2) {
+    if (password.value !== password2.value) {
+        showErrorMessage(password, "Senhas não batem");
+        showErrorMessage(password2, "Senhas não batem");
+    }
 }
 function hideErrorMessages(form) {
     form
