@@ -24,6 +24,12 @@ function hideErrorMessages(form) {
         .querySelectorAll("." + SHOW_ERROR_MESSAGES)
         .forEach(function (item) { return item.classList.remove(SHOW_ERROR_MESSAGES); });
 }
+function showErrorMessage(input, msg) {
+    var formFields = input.parentElement;
+    var errorMessage = formFields.querySelector(".error-message");
+    errorMessage.innerText = msg;
+    formFields.classList.add(SHOW_ERROR_MESSAGES);
+}
 
 
 /***/ })
