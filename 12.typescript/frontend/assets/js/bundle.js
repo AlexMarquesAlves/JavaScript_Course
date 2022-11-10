@@ -15,6 +15,9 @@ var username = document.querySelector(".username");
 var email = document.querySelector(".email");
 var password = document.querySelector(".password");
 var password2 = document.querySelector(".password2");
+form.addEventListener("submit", function (event) {
+    event.preventDefault();
+});
 
 
 /***/ })

@@ -5,3 +5,7 @@ const username = document.querySelector(".username") as HTMLInputElement;
 const email = document.querySelector(".email") as HTMLInputElement;
 const password = document.querySelector(".password") as HTMLInputElement;
 const password2 = document.querySelector(".password2") as HTMLInputElement;
+
+form.addEventListener("submit", function (event: Event) {
+  event.preventDefault();
+});
