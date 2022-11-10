@@ -1,3 +1,5 @@
+import isEmail from "validator/lib/isEmail";
+
 const SHOW_ERROR_MESSAGES = "show-error-message";
 
 const form = document.querySelector(".form") as HTMLFormElement;
@@ -10,12 +12,17 @@ form.addEventListener("submit", function (event: Event) {
   event.preventDefault();
   hideErrorMessages(this);
   checkForEmptyFields(username, email, password, password2);
+  checkEmail(email);
 });
 
 function checkForEmptyFields(...inputs: HTMLInputElement[]): void {
   inputs.forEach((input) => {
     if (!input.value) showErrorMessage(input, "Campo não pode ficar vazio");
   });
+}
+
+function checkEmail(input: HTMLInputElement): void {
+  if (!isEmail(input.value)) showErrorMessage(input, "Email inválido");
 }
 
 function hideErrorMessages(form: HTMLFormElement): void {
