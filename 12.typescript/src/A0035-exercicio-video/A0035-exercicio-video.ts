@@ -34,7 +34,13 @@ export default class VideoPlayer implements VideoPlayerProtocols {
   }
 
   playToggle(): void {
-    //
+    if (this.videoPlayer.paused) {
+      this.videoPlayer.play();
+      this.playButton.innerText = "Pause";
+    } else {
+      this.videoPlayer.pause();
+      this.playButton.innerText = "Play";
+    }
   }
 
   stop(): void {

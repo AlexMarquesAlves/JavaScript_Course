@@ -27,6 +27,14 @@ class VideoPlayer {
         });
     }
     playToggle() {
+        if (this.videoPlayer.paused) {
+            this.videoPlayer.play();
+            this.playButton.innerText = "Pause";
+        }
+        else {
+            this.videoPlayer.pause();
+            this.playButton.innerText = "Play";
+        }
     }
     stop() {
     }
