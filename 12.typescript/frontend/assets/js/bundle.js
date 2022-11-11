@@ -1,13 +1,36 @@
 /******/ (() => { // webpackBootstrap
+/******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
 /***/ "./src/A0035-exercicio-video/A0035-exercicio-video.ts":
 /*!************************************************************!*\
   !*** ./src/A0035-exercicio-video/A0035-exercicio-video.ts ***!
   \************************************************************/
-/***/ (() => {
+/***/ ((__unused_webpack_module, exports) => {
 
-throw new Error("Module build failed (from ./node_modules/ts-loader/index.js):\nError: TypeScript emitted no output for E:\\PerfLogs\\JavaScript_Course\\12.typescript\\src\\A0035-exercicio-video\\A0035-exercicio-video.ts.\n    at makeSourceMapAndFinish (E:\\PerfLogs\\JavaScript_Course\\12.typescript\\node_modules\\ts-loader\\dist\\index.js:52:18)\n    at successLoader (E:\\PerfLogs\\JavaScript_Course\\12.typescript\\node_modules\\ts-loader\\dist\\index.js:39:5)\n    at Object.loader (E:\\PerfLogs\\JavaScript_Course\\12.typescript\\node_modules\\ts-loader\\dist\\index.js:22:5)");
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+class VideoPlayer {
+    constructor(videoPlayerElements) {
+        this.videoPlayer = videoPlayerElements.videoPlayer;
+        this.playButton = videoPlayerElements.playButton;
+        this.stopButton = videoPlayerElements.stopButton;
+    }
+    iniciarEventos() {
+    }
+    playToggle() {
+    }
+    stop() {
+    }
+}
+exports["default"] = VideoPlayer;
+const videoPlayer = new VideoPlayer({
+    videoPlayer: document.querySelector(".video"),
+    playButton: document.querySelector(".play"),
+    stopButton: document.querySelector(".stop"),
+});
+videoPlayer.iniciarEventos();
+
 
 /***/ })
 
@@ -39,9 +62,8 @@ throw new Error("Module build failed (from ./node_modules/ts-loader/index.js):\n
 /******/ 	
 /************************************************************************/
 var __webpack_exports__ = {};
-// This entry need to be wrapped in an IIFE because it need to be in strict mode.
+// This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
 (() => {
-"use strict";
 var exports = __webpack_exports__;
 /*!************************************************!*\
   !*** ./src/A0019-exercicio/A0019-exercicio.ts ***!
