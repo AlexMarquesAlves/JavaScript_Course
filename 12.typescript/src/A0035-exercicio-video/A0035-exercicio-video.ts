@@ -53,4 +53,5 @@ const videoPlayer = new VideoPlayer({
   playButton: document.querySelector(".play") as HTMLButtonElement,
   stopButton: document.querySelector(".stop") as HTMLButtonElement,
 });
+
 videoPlayer.iniciarEventos();
