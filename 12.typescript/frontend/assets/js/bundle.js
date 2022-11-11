@@ -1,5 +1,4 @@
 /******/ (() => { // webpackBootstrap
-/******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
 /***/ "./src/A0035-exercicio-video/A0035-exercicio-video.ts":
@@ -8,8 +7,7 @@
   \************************************************************/
 /***/ (() => {
 
-
-
+throw new Error("Module build failed (from ./node_modules/ts-loader/index.js):\nError: TypeScript emitted no output for E:\\PerfLogs\\JavaScript_Course\\12.typescript\\src\\A0035-exercicio-video\\A0035-exercicio-video.ts.\n    at makeSourceMapAndFinish (E:\\PerfLogs\\JavaScript_Course\\12.typescript\\node_modules\\ts-loader\\dist\\index.js:52:18)\n    at successLoader (E:\\PerfLogs\\JavaScript_Course\\12.typescript\\node_modules\\ts-loader\\dist\\index.js:39:5)\n    at Object.loader (E:\\PerfLogs\\JavaScript_Course\\12.typescript\\node_modules\\ts-loader\\dist\\index.js:22:5)");
 
 /***/ })
 
@@ -41,8 +39,9 @@
 /******/ 	
 /************************************************************************/
 var __webpack_exports__ = {};
-// This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
+// This entry need to be wrapped in an IIFE because it need to be in strict mode.
 (() => {
+"use strict";
 var exports = __webpack_exports__;
 /*!************************************************!*\
   !*** ./src/A0019-exercicio/A0019-exercicio.ts ***!
