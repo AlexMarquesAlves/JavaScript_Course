@@ -29,3 +29,6 @@ const aluno3: PessoaProtocolo2 = {
 };
 
 console.log(aluno1, aluno2, aluno3);
+
+// Module mode
+export default 1;
