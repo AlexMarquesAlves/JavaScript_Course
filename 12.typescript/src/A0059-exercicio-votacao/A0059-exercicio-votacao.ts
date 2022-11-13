@@ -52,8 +52,23 @@ votation1.vote(1);
 votation1.vote(0);
 votation1.vote(0);
 votation1.vote(0);
+votation1.vote(2);
+
+const votation2 = new Votation("Qual sua cor favorita? \n");
+votation2.addVotationOption({ option: "Vermelho", numberOfVotes: 0 });
+votation2.addVotationOption({ option: "Amarelo", numberOfVotes: 0 });
+votation2.addVotationOption({ option: "Azul", numberOfVotes: 0 });
+votation2.addVotationOption({ option: "Roxo", numberOfVotes: 0 });
+votation2.addVotationOption({ option: "Marrom", numberOfVotes: 0 });
+// Votações
+votation2.vote(1);
+votation2.vote(1);
+votation2.vote(0);
+votation2.vote(0);
+votation2.vote(0);
 
 const votationApp = new VotationApp();
 votationApp.addVotation(votation1);
+votationApp.addVotation(votation2);
 
 votationApp.showVotation();
