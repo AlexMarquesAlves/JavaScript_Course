@@ -15,6 +15,10 @@ export class Votation {
     if (!this._votationOptions[votationIndex]) return;
     this._votationOptions[votationIndex].numberOfVotes += 1;
   }
+
+  get votationOptions(): VotationOption[] {
+    return this._votationOptions;
+  }
 }
 
 export class VotationApp {
@@ -22,5 +26,16 @@ export class VotationApp {
 
   addVotation(votation: Votation): void {
     this.votations.push(votation);
+  }
+
+  showVotation(): void {
+    for (const votation of this.votations) {
+      console.log(votation.details);
+
+      for (const votationOption of votation.votationOptions) {
+        console.log(votationOption.option, votationOption.numberOfVotes);
+      }
+      console.log("\n");
+    }
   }
 }
