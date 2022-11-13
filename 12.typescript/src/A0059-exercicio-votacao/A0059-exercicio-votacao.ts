@@ -19,4 +19,8 @@ export class Votation {
 
 export class VotationApp {
   private votations: Votation[] = [];
+
+  addVotation(votation: Votation): void {
+    this.votations.push(votation);
+  }
 }
