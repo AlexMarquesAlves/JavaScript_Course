@@ -39,3 +39,15 @@ export class VotationApp {
     }
   }
 }
+
+const votation1 = new Votation(
+  "Qual sua linguagem de programação favorita? \n",
+);
+votation1.addVotationOption({ option: "Pythons", numberOfVotes: 0 });
+votation1.addVotationOption({ option: "JavaScript", numberOfVotes: 0 });
+votation1.addVotationOption({ option: "TypeScript", numberOfVotes: 0 });
+
+const votationApp = new VotationApp();
+votationApp.addVotation(votation1);
+
+votationApp.showVotation();
