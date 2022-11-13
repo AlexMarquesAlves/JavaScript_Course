@@ -10,4 +10,9 @@ export class Votation {
   addVotationOption(votationOption: VotationOption): void {
     this._votationOptions.push(votationOption);
   }
+
+  vote(votationIndex: number): void {
+    if (!this._votationOptions[votationIndex]) return;
+    this._votationOptions[votationIndex].numberOfVotes += 1;
+  }
 }
