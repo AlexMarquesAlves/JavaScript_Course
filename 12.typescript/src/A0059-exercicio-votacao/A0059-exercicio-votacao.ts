@@ -16,3 +16,7 @@ export class Votation {
     this._votationOptions[votationIndex].numberOfVotes += 1;
   }
 }
+
+export class VotationApp {
+  private votations: Votation[] = [];
+}
