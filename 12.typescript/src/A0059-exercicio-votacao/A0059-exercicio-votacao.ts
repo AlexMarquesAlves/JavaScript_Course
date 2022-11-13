@@ -6,4 +6,8 @@ type VotationOption = {
 export class Votation {
   private _votationOptions: VotationOption[] = [];
   constructor(public details: string) {}
+
+  addVotationOption(votationOption: VotationOption): void {
+    this._votationOptions.push(votationOption);
+  }
 }
