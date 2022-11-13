@@ -46,6 +46,12 @@ const votation1 = new Votation(
 votation1.addVotationOption({ option: "Pythons", numberOfVotes: 0 });
 votation1.addVotationOption({ option: "JavaScript", numberOfVotes: 0 });
 votation1.addVotationOption({ option: "TypeScript", numberOfVotes: 0 });
+// Votações
+votation1.vote(1);
+votation1.vote(1);
+votation1.vote(0);
+votation1.vote(0);
+votation1.vote(0);
 
 const votationApp = new VotationApp();
 votationApp.addVotation(votation1);
