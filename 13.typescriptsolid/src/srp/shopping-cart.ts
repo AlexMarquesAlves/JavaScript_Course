@@ -1,6 +1,6 @@
 type CartItem = { name: string; price: number };
 // eslint-disable-next-line @typescript-eslint/ban-types
-type OrderStatus = "open" | "close";
+type OrderStatus = "open" | "closed";
 
 export class ShoppingCart {
   private readonly _items: CartItem[] = [];
@@ -18,6 +18,10 @@ export class ShoppingCart {
     return this._items;
   }
 
+  get orderStatus(): Readonly<OrderStatus> {
+    return this._orderStatus;
+  }
+
   total(): number {
     return +this._items
       .reduce((total, next) => total + next.price, 0)
@@ -30,7 +34,7 @@ export class ShoppingCart {
       return;
     }
 
-    this._orderStatus = "close";
+    this._orderStatus = "closed";
     this.sendMessage(`Seu pedido com total de $${this.total()} foi recebido`);
     this.saveOrder();
     this.clear();
@@ -62,3 +66,4 @@ shoppingCart.addItem({ name: "Lápis", price: 1.59 });
 console.log(shoppingCart.items);
 console.log(shoppingCart.total());
 shoppingCart.checkout();
+console.log(shoppingCart.orderStatus);
