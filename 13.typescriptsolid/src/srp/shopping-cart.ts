@@ -1,7 +1,10 @@
 type CartItem = { name: string; price: number };
+// eslint-disable-next-line @typescript-eslint/ban-types
+type OrderStatus = "open" | "close";
 
 export class ShoppingCart {
   private readonly _items: CartItem[] = [];
+  private _orderStatus: OrderStatus = "open";
 
   addItem(item: CartItem): void {
     this._items.push(item);
@@ -20,6 +23,35 @@ export class ShoppingCart {
       .reduce((total, next) => total + next.price, 0)
       .toFixed(2);
   }
+
+  checkout(): void {
+    if (this.isEmpty()) {
+      console.log("Vosso carrinho está vazio");
+      return;
+    }
+
+    this._orderStatus = "close";
+    this.sendMessage(`Seu pedido com total de $${this.total()} foi recebido`);
+    this.saveOrder();
+    this.clear();
+  }
+
+  isEmpty(): boolean {
+    return this._items.length === 0;
+  }
+
+  sendMessage(msg: string): void {
+    console.log("Mensagem enviada", msg);
+  }
+
+  saveOrder(): void {
+    console.log("Pedido salvo com sucesso");
+  }
+
+  clear(): void {
+    console.log("Carrinho de compras vazio");
+    this._items.length = 0;
+  }
 }
 
 const shoppingCart = new ShoppingCart();
@@ -29,3 +61,4 @@ shoppingCart.addItem({ name: "Lápis", price: 1.59 });
 
 console.log(shoppingCart.items);
 console.log(shoppingCart.total());
+shoppingCart.checkout();
