@@ -7,7 +7,7 @@ const createSut = (name: string, price: number): Product => {
 describe("Product", () => {
   afterEach(() => jest.clearAllMocks());
 
-  it("should be able to return parameters", () => {
+  it("should have return properties name and price", () => {
     // System under test
     const sut = createSut("Camiseta", 49.9);
 
