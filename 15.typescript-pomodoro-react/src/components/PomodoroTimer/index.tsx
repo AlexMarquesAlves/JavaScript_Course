@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { useInterval } from "../../hooks/UseInterval";
 import bellFinish from "../../sounds/src_sounds_bell-finish.mp3";
 import bellStart from "../../sounds/src_sounds_bell-start.mp3";
@@ -31,31 +31,48 @@ export const PomodoroTimer = (props: Props): JSX.Element => {
   useInterval(
     () => {
       setMainTime(mainTime - 1);
+      if (working) setFullWorkingTime(fullWorkingTime + 1);
     },
     timeCounting ? 1000 : null
   );
 
-  const configureWork = () => {
+  const configureWork = useCallback(() => {
     setTimeCounting(true);
     setWorking(true);
     setResting(false);
     setMainTime(props.pomodoroTime);
     audioStartWorking.play();
-  };
+  }, [
+    setTimeCounting,
+    setWorking,
+    setResting,
+    setMainTime,
+    props.pomodoroTime,
+  ]);
 
-  const configureRest = (log: boolean) => {
-    setTimeCounting(true);
-    setWorking(false);
-    setResting(true);
-    setMainTime(props.pomodoroTime);
+  const configureRest = useCallback(
+    (log: boolean) => {
+      setTimeCounting(true);
+      setWorking(false);
+      setResting(true);
+      setMainTime(props.pomodoroTime);
 
-    if (log) {
-      setMainTime(props.longRestTime);
-    }
-    setMainTime(props.shortRestTime);
+      if (log) {
+        setMainTime(props.longRestTime);
+      }
+      setMainTime(props.shortRestTime);
 
-    audioStopWorking.play();
-  };
+      audioStopWorking.play();
+    },
+    [
+      setTimeCounting,
+      setWorking,
+      setResting,
+      setMainTime,
+      props.longRestTime,
+      props.shortRestTime,
+    ]
+  );
 
   useEffect(() => {
     if (working) document.body.classList.add("working");
@@ -89,7 +106,7 @@ export const PomodoroTimer = (props: Props): JSX.Element => {
 
   return (
     <div className="pomodoro">
-      <h2>You are: working</h2>
+      <h2>Você está: {working ? "Trabalhando" : "Descansando"}</h2>
       <Timer mainTime={mainTime} />
       <div className="controls">
         <Button text="Work" onClick={() => configureWork()} />
